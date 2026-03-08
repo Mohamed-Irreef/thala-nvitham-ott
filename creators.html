@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala Nivitham - Creators</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/creators.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <script src="js/navbar.js"></script>
+
+    <main class="creators-main">
+        
+                <!-- ══════════ HERO BANNER ══════════ -->
+        <section class="hero-banner">
+
+          <!-- ── Slide 1 ── -->
+          <div class="hero-slide active">
+            <div class="hero-background" style="background-image:url('assets/creator-banner1.png')"></div>
+            <div class="hero-content">
+              <div class="hero-text">
+                <span class="hero-badge">⭐ TOP CREATOR</span>
+                <h1 class="hero-title">Kavi Rajan</h1>
+                <div class="hero-meta">
+                  <span>Independent Music Producer</span> • <span>Tamil Rap</span>
+                </div>
+                <p class="hero-description">Creating Tamil rap and experimental fusion music with deep cultural roots.</p>
+                <div class="hero-actions">
+                  <button class="hero-play" onclick="handleCreatorAction('view', 'cr_kavi')">▶ View Profile</button>
+                  <button class="hero-icon" onclick="handleCreatorAction('follow', 'cr_kavi')" title="Follow Creator">+</button>
+                  <button class="hero-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Slide 2 ── -->
+          <div class="hero-slide">
+            <div class="hero-background" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop')"></div>
+            <div class="hero-content">
+              <div class="hero-text">
+                <span class="hero-badge">🎤 FEATURED CREATOR</span>
+                <h1 class="hero-title">Arun Kumar</h1>
+                <div class="hero-meta">
+                  <span>Technology Podcast Host</span> • <span>150K Followers</span>
+                </div>
+                <p class="hero-description">Deep dive into AI, startups, and the future of technology in India. Award-winning podcast series every week.</p>
+                <div class="hero-actions">
+                  <button class="hero-play" onclick="handleCreatorAction('view', 'cr_arun')">▶ View Profile</button>
+                  <button class="hero-icon" onclick="handleCreatorAction('follow', 'cr_arun')" title="Follow Creator">+</button>
+                  <button class="hero-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Dots ── -->
+          <div class="hero-dots">
+            <button class="hero-dot active"></button>
+            <button class="hero-dot"></button>
+          </div>
+
+        </section>
+
+        <section class="ott-section" id="trending-creators-section" style="margin-top:20px;">
+            <div class="section-header">
+                <div>
+                    <h2>Trending Creators</h2>
+                    <p class="section-subtitle">Creators gaining popularity this week</p>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-arrow left-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="carousel-arrow right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="carousel-track" id="trending-creators-track">
+                </div>
+        </section>
+
+        <section class="ott-section" id="creator-categories-section">
+            <div class="section-header">
+                <h2>Browse by Category</h2>
+            </div>
+            <div class="category-grid" id="creator-categories-grid">
+                </div>
+        </section>
+
+        <section class="ott-section" id="featured-creators-section">
+            <div class="section-header">
+                <div>
+                    <h2>Featured Creators</h2>
+                    <p class="section-subtitle">Highly influential voices on the platform</p>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-arrow left-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="carousel-arrow right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="carousel-track" id="featured-creators-track">
+                </div>
+        </section>
+
+        <section class="ott-section" id="top-creators-section">
+            <div class="section-header">
+                <h2>Top Creators This Week</h2>
+                <p class="section-subtitle">The most streamed and followed artists</p>
+            </div>
+            <div class="top-creators-list" id="top-creators-list">
+                </div>
+        </section>
+
+        <section class="ott-section" id="creator-collections-section">
+            <div class="section-header">
+                <div>
+                    <h2>Rising Podcast Hosts</h2>
+                    <p class="section-subtitle">Curated collections of fresh talent</p>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-arrow left-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="carousel-arrow right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="carousel-track" id="collections-track">
+                </div>
+        </section>
+
+        <section class="ott-section" id="recommended-creators-section">
+            <div class="section-header">
+                <div>
+                    <h2>Recommended Creators</h2>
+                    <p class="section-subtitle">Based on your listening activity</p>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-arrow left-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="carousel-arrow right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="carousel-track" id="recommended-creators-track">
+                </div>
+        </section>
+
+    </main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:14px">
+        <img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+      </div>
+      <p class="footer-desc">India's premier digital audio streaming platform for podcasts, music, rap, and storytelling. Stream in 6 languages.</p>
+      <div class="social-links">
+        <a class="social-link" href="#">𝕏</a>
+        <a class="social-link" href="#">in</a>
+        <a class="social-link" href="#">▶</a>
+        <a class="social-link" href="#">📷</a>
+        <a class="social-link" href="#">💬</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <a class="footer-link" href="#">Home</a>
+      <a class="footer-link" href="#">Podcasts</a>
+      <a class="footer-link" href="#">Music</a>
+      <a class="footer-link" href="#">Creators</a>
+      <a class="footer-link" href="#">Production</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <a class="footer-link" href="#">About Us</a>
+      <a class="footer-link" href="#">Careers</a>
+      <a class="footer-link" href="#">Press</a>
+      <a class="footer-link" href="#">Blog</a>
+      <a class="footer-link" href="#">Contact Us</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <a class="footer-link" href="#">Help Center</a>
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Terms & Conditions</a>
+      <a class="footer-link" href="#">Cookie Policy</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Creators</div>
+      <a class="footer-link" href="#">Become a Creator</a>
+      <a class="footer-link" href="#">Podcast Studio</a>
+      <a class="footer-link" href="#">Upload Music</a>
+      <a class="footer-link" href="#">Investor Portal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Thala Nivitham. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a class="footer-link" style="margin:0" href="#">Privacy</a>
+      <a class="footer-link" style="margin:0" href="#">Terms</a>
+      <a class="footer-link" style="margin:0" href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/creators.js"></script>
+</body>
+</html>

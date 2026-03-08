@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala Nivitham - Podcasts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/podcast.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/side-panel.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <div id="navbar-placeholder"></div>
+    <script src="js/navbar.js"></script>
+
+        <!-- ══════════ HERO BANNER ══════════ -->
+    <section class="hero-banner">
+
+      <!-- ── Slide 1 ── -->
+      <div class="hero-slide active">
+        <div class="hero-background" style="background-image:url('assets/podacst-banner1.png')"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="hero-badge">🔥 FEATURED SHOW</span>
+            <h1 class="hero-title">Tech Nexus Tamil Season 3</h1>
+            <div class="hero-meta">
+              <span>Tamil</span> • <span>24 Episodes</span> • <span>Avg 45 Min</span>
+            </div>
+            <p class="hero-description">Deep dive into AI, startups, and the future of technology in Tamil. Hosted by industry experts analyzing global trends for the Indian ecosystem.</p>
+            <div class="hero-actions">
+              <button class="hero-play" data-type="audio" data-id="ep_tech_01">▶ Play Latest Episode</button>
+              <button class="hero-icon" data-type="podcast" data-id="pod_tech_nexus" title="Follow Podcast">+</button>
+              <button class="hero-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+            </div>
+            <div class="hero-subtext">
+              <i class="fa-solid fa-bag-shopping icon-prime"></i> Watch with a Prime membership
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Slide 2 ── -->
+      <div class="hero-slide">
+        <div class="hero-background" style="background-image:url('assets/podacst-banner2.png')"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="hero-badge">🎤 NEW SERIES</span>
+            <h1 class="hero-title">Startup Diaries Season 2</h1>
+            <div class="hero-meta">
+              <span>Tamil</span> • <span>18 Episodes</span> • <span>Avg 55 Min</span>
+            </div>
+            <p class="hero-description">Real stories of entrepreneurs navigating challenges, funding, and growth in the Indian startup ecosystem. Hosted by Sneha M.</p>
+            <div class="hero-actions">
+              <button class="hero-play" data-type="audio" data-id="ep_startup_01">▶ Play Episode 1</button>
+              <button class="hero-icon" data-type="podcast" data-id="pod_startup" title="Follow Podcast">+</button>
+              <button class="hero-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+            </div>
+            <div class="hero-subtext">
+              <i class="fa-solid fa-bag-shopping icon-prime"></i> Watch with a Prime membership
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Dots ── -->
+      <div class="hero-dots">
+        <button class="hero-dot active"></button>
+        <button class="hero-dot"></button>
+      </div>
+
+    </section>
+
+    <!-- ══════════ MAIN CONTENT ══════════ -->
+    <main class="main-content podcast-page">
+
+        <!-- ── CATEGORY TABS ── -->
+        <div class="category-filters" style="padding: 24px 30px;">
+            <button class="tab-btn active" data-tab="all">All</button>
+            <button class="tab-btn" data-tab="technology">Technology</button>
+            <button class="tab-btn" data-tab="entrepreneurship">Entrepreneurship</button>
+            <button class="tab-btn" data-tab="health-care">Health Care</button>
+            <button class="tab-btn" data-tab="arts-science">Arts &amp; Science</button>
+            <button class="tab-btn" data-tab="education">Education</button>
+            <button class="tab-btn" data-tab="sports">Sports</button>
+            <button class="tab-btn" data-tab="current-affairs">Current Affairs</button>
+            <button class="tab-btn" data-tab="storytelling">Storytelling</button>
+        </div>
+
+        <div id="podcast-all-sections">
+        <!-- ── TRENDING PODCASTS ── -->
+        <section class="section" id="trending">
+            <div class="section-header">
+                <div><div class="section-title">Trending Podcasts</div><div class="section-subtitle">Most listened this week</div></div>
+                <a class="see-all" href="#">See all →</a>
+            </div>
+            <div class="row-wrapper">
+                <button class="row-nav prev">‹</button>
+                <div class="cards-row" id="trendingPodcastsRow">
+                    <!-- Cards generated by JS -->
+                </div>
+                <button class="row-nav next">›</button>
+            </div>
+        </section>
+
+        <!-- ── LATEST EPISODES ── -->
+        <section class="section" id="latest-episodes">
+            <div class="section-header">
+                <div><div class="section-title">Latest Episodes</div><div class="section-subtitle">Fresh content just for you</div></div>
+                <a class="see-all" href="#">See all →</a>
+            </div>
+            <div class="row-wrapper">
+                <button class="row-nav prev">‹</button>
+                <div class="cards-row" id="latestEpisodesRow">
+                    <!-- Cards generated by JS -->
+                </div>
+                <button class="row-nav next">›</button>
+            </div>
+        </section>
+
+        <!-- ── TOP SHOWS ── -->
+        <section class="section" id="top-shows">
+            <div class="section-header">
+                <div><div class="section-title">Top Shows</div><div class="section-subtitle">Popular and beloved series</div></div>
+                <a class="see-all" href="#">See all →</a>
+            </div>
+            <div class="row-wrapper">
+                <button class="row-nav prev">‹</button>
+                <div class="cards-row" id="topShowsRow">
+                    <!-- Cards generated by JS -->
+                </div>
+                <button class="row-nav next">›</button>
+            </div>
+        </section>
+
+        <!-- ── FEATURED PODCASTS ── -->
+        <section class="section" id="featured-podcasts">
+            <div class="section-header">
+                <div><div class="section-title">Featured Podcasts</div><div class="section-subtitle">Handpicked series from top creators</div></div>
+                <a class="see-all" href="#">See all →</a>
+            </div>
+            <div class="row-wrapper">
+                <button class="row-nav prev">‹</button>
+                <div class="cards-row" id="featuredPodcastsRow">
+                    <!-- Cards generated by JS -->
+                </div>
+                <button class="row-nav next">›</button>
+            </div>
+        </section>
+
+        </div><!-- /podcast-all-sections -->
+        <div id="podcast-tab-panel" class="podcast-tab-panel"></div>
+
+    </main>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom:14px">
+            <img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+          </div>
+          <p class="footer-desc">India's premier digital audio streaming platform for podcasts, music, rap, and storytelling. Stream in 6 languages.</p>
+          <div class="social-links">
+            <a class="social-link" href="#">𝕏</a>
+            <a class="social-link" href="#">in</a>
+            <a class="social-link" href="#">▶</a>
+            <a class="social-link" href="#">📷</a>
+            <a class="social-link" href="#">💬</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Platform</div>
+          <a class="footer-link" href="#">Home</a>
+          <a class="footer-link" href="#">Podcasts</a>
+          <a class="footer-link" href="#">Music</a>
+          <a class="footer-link" href="#">Creators</a>
+          <a class="footer-link" href="#">Production</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <a class="footer-link" href="#">About Us</a>
+          <a class="footer-link" href="#">Careers</a>
+          <a class="footer-link" href="#">Press</a>
+          <a class="footer-link" href="#">Blog</a>
+          <a class="footer-link" href="#">Contact Us</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Support</div>
+          <a class="footer-link" href="#">Help Center</a>
+          <a class="footer-link" href="#">Privacy Policy</a>
+          <a class="footer-link" href="#">Terms & Conditions</a>
+          <a class="footer-link" href="#">Cookie Policy</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Creators</div>
+          <a class="footer-link" href="#">Become a Creator</a>
+          <a class="footer-link" href="#">Podcast Studio</a>
+          <a class="footer-link" href="#">Upload Music</a>
+          <a class="footer-link" href="#">Investor Portal</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Thala Nivitham. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a class="footer-link" style="margin:0" href="#">Privacy</a>
+          <a class="footer-link" style="margin:0" href="#">Terms</a>
+          <a class="footer-link" style="margin:0" href="#">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/cards.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/podcast.js"></script>
+
+    <!-- Add Global Bottom Player Container -->
+    <div id="global-player-root"></div>
+
+    <!-- Inject Modular Audio Simulation Player Logic -->
+    <script src="player/playerState.js"></script>
+    <script src="player/queueManager.js"></script>
+    <script src="player/audioPlayer.js"></script>
+    <script src="components/bottomPlayer.js"></script>
+    <script src="components/sidePanel.js"></script>
+    <script src="components/queueView.js"></script>
+    <script src="components/timeline.js"></script>
+    <script src="player/playerUI.js"></script>
+
+    <script>
+      // Spin up global UX player layer
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof initializePlayer === 'function') {
+          initializePlayer();
+        }
+      });
+    </script>
+</body>
+</html>

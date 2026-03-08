@@ -1,0 +1,137 @@
+/* --- Variables & Reset --- */
+:root {
+    --bg-base: #0b0b0f;
+    --card-bg: #15151c;
+    --card-hover: #1e1e28;
+    --accent: #8a5cff;
+    --accent-glow: rgba(138, 92, 255, 0.4);
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0b0;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --font-main: 'Inter', sans-serif;
+    --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 90px;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+
+/* Custom Hero styling is entirely handled by global style.css `.hero` */
+
+/* --- Category Filters --- */
+.category-filters {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    margin-top: 30px;
+    padding-bottom: 10px; /* space for scrollbar */
+    scrollbar-width: none;
+}
+.category-filters::-webkit-scrollbar { display: none; }
+
+.category-filters .tab-btn {
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.category-filters .tab-btn.active, .category-filters .tab-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-base);
+}
+
+/* --- Content Rows & Cards --- */
+.section {
+    margin-top: 50px;
+}
+
+.cards-row {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.card, .content-card {
+    width: 220px;
+    height: auto;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-sub, .card-creator {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.card-meta {
+    font-size: 13px;
+    color: #888;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .card, .content-card { width: 160px; }
+}
+
+/* ── Tab Panel Wrapper ── */
+.podcast-tab-panel {
+    display: block;
+    padding: 40px 0 60px;
+}
+
+/* ── Tab Cards Grid ── */
+.tab-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 22px;
+}
+
+/* ── Tab Load More ── */
+.tab-load-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.tab-load-more-btn {
+    background: transparent;
+    border: 1.5px solid #00A8FF;
+    color: #00A8FF;
+    padding: 12px 44px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab-load-more-btn:hover:not(:disabled) {
+    background: #00A8FF;
+    color: #000;
+}
+
+.tab-load-more-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}

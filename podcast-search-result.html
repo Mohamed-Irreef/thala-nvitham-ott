@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/png" href="assets/logo-icon.png"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Podcast Search Results — Thala Nivitham</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css?v=2"/>
+<link rel="stylesheet" href="css/podcast-search-result.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<div id="navbar-placeholder"></div>
+<script src="js/navbar.js"></script>
+
+<!-- ══════════ MAIN CONTENT ══════════ -->
+<main class="psr-main">
+
+  <!-- Search Context Header -->
+  <div class="psr-header">
+    <p class="psr-eyebrow">Your Search</p>
+    <h1 class="psr-heading" id="psr-heading">Podcasts</h1>
+    <p class="psr-subtext" id="psr-subtext">Showing results based on your search</p>
+  </div>
+
+  <!-- Category Filter Tabs -->
+  <div class="psr-tabs-wrapper">
+    <div class="psr-tabs" id="psr-tabs">
+      <!-- injected by JS -->
+    </div>
+  </div>
+
+  <!-- Results Grid -->
+  <div class="psr-grid" id="psr-grid">
+    <!-- injected by JS -->
+  </div>
+
+  <!-- Load More -->
+  <div class="psr-load-more-wrap">
+    <button class="psr-load-more-btn" id="psr-load-more">Load More</button>
+  </div>
+
+</main>
+
+<!-- ══════════ SCRIPTS ══════════ -->
+<script src="js/cards.js"></script>
+<script src="js/podcast-search-result.js"></script>
+
+<!-- ══════════ FOOTER ══════════ -->
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:14px">
+        <img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+      </div>
+      <p class="footer-desc">India's premier digital audio streaming platform for podcasts, music, rap, and storytelling. Stream in 6 languages.</p>
+      <div class="social-links">
+        <a class="social-link" href="#">𝕏</a>
+        <a class="social-link" href="#">in</a>
+        <a class="social-link" href="#">▶</a>
+        <a class="social-link" href="#">📷</a>
+        <a class="social-link" href="#">💬</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <a class="footer-link" href="#">Home</a>
+      <a class="footer-link" href="#">Podcasts</a>
+      <a class="footer-link" href="#">Music</a>
+      <a class="footer-link" href="#">Creators</a>
+      <a class="footer-link" href="#">Production</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <a class="footer-link" href="#">About Us</a>
+      <a class="footer-link" href="#">Careers</a>
+      <a class="footer-link" href="#">Press</a>
+      <a class="footer-link" href="#">Blog</a>
+      <a class="footer-link" href="#">Contact Us</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <a class="footer-link" href="#">Help Center</a>
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Terms & Conditions</a>
+      <a class="footer-link" href="#">Cookie Policy</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Creators</div>
+      <a class="footer-link" href="#">Become a Creator</a>
+      <a class="footer-link" href="#">Podcast Studio</a>
+      <a class="footer-link" href="#">Upload Music</a>
+      <a class="footer-link" href="#">Investor Portal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Thala Nivitham. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a class="footer-link" style="margin:0" href="#">Privacy</a>
+      <a class="footer-link" style="margin:0" href="#">Terms</a>
+      <a class="footer-link" style="margin:0" href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

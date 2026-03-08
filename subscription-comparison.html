@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala Nivitham - Subscription Plans</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/subscription-comparison.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <div id="navbar-placeholder"></div>
+    <script src="js/navbar.js"></script>
+
+    <main class="plans-container">
+        
+        <header class="plans-header">
+            <h1>Start your membership today</h1>
+            <p>Choose a Thala Nivitham plan. Upgrade, downgrade, or cancel anytime.</p>
+        </header>
+
+        <section class="table-section">
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="col-feature">Feature</th>
+                            <th class="col-plan">Basic</th>
+                            <th class="col-plan highlight-col">Premium</th>
+                            <th class="col-plan">Premium Plus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-feature">Podcast Streaming</td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Music Streaming</td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Rap & Indie Music</td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Number of Devices</td>
+                            <td class="col-plan">1</td>
+                            <td class="col-plan highlight-col">3</td>
+                            <td class="col-plan">5</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Audio Quality</td>
+                            <td class="col-plan">Standard</td>
+                            <td class="col-plan highlight-col">High</td>
+                            <td class="col-plan">High</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Ad-Free Listening</td>
+                            <td class="col-plan"><span class="cross">&#10006;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Offline Downloads</td>
+                            <td class="col-plan"><span class="cross">&#10006;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Early Access Content</td>
+                            <td class="col-plan"><span class="cross">&#10006;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Exclusive Premium Content</td>
+                            <td class="col-plan"><span class="cross">&#10006;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Investor Produced Songs</td>
+                            <td class="col-plan"><span class="cross">&#10006;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Playlist Creation</td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Personalized Recommendations</td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                            <td class="col-plan highlight-col"><span class="check">&#10004;</span></td>
+                            <td class="col-plan"><span class="check">&#10004;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="selection-section">
+            <div class="plan-cards-container">
+                <div class="plan-card" data-plan="Basic" data-billing="when paid annually (₹799/year)">
+                    <h3>Basic</h3>
+                    <div class="price">₹799 <span>/ year</span></div>
+                </div>
+
+                <div class="plan-card selected" data-plan="Premium Annual" data-billing="when paid annually (₹1499/year)">
+                    <div class="recommended-badge">Recommended</div>
+                    <h3>Premium</h3>
+                    <div class="price">₹1499 <span>/ year</span></div>
+                </div>
+
+                <div class="plan-card" data-plan="Premium Plus Monthly" data-billing="when paid monthly (₹299/month)">
+                    <h3>Premium Plus</h3>
+                    <div class="price">₹299 <span>/ month</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <button id="main-cta-btn" class="cta-btn">Join Premium Annual</button>
+            <p id="cta-subtext" class="cta-subtext">*when paid annually (₹1499/year)</p>
+        </section>
+
+    </main>
+
+    <footer class="simple-footer">
+        <div class="footer-logo"><img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/></div>
+        <div class="footer-links">
+            <a href="#">Terms</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2026 Thala Nivitham. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/subscription-comparison.js"></script>
+</body>
+</html>

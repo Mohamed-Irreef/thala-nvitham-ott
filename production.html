@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala Nivitham - Production Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/production.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <div id="navbar-placeholder"></div>
+    <script src="js/navbar.js"></script>
+    <!-- ══════════ HERO BANNER ══════════ -->
+    <section class="hero-banner">
+      <div class="hero-background" style="background-image:url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop')"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">🎙 ORIGINALS</span>
+          <h1 class="hero-title">Production Hub</h1>
+          <div class="hero-meta">
+            <span>Create</span> • <span>Fund</span> • <span>Produce</span>
+          </div>
+          <p class="hero-description">Join the Thala Nivitham ecosystem. Whether you are an independent artist or an investor — our hub connects talent with opportunity.</p>
+          <div class="hero-actions">
+            <button class="hero-play" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">▶ Start a Project</button>
+            <button class="hero-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ecosystem-intro">
+        <div class="section-heading">
+            <h2>Production & Investment Ecosystem</h2>
+            <p>Collaborate, create, and grow with our integrated platform tools.</p>
+        </div>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+                <h3>Music Creators</h3>
+                <p>Submit your original songs, rap tracks, or full albums to publish and monetize on our platform.</p>
+            </div>
+            <div class="feature-card">
+                <div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                <h3>Podcast Creators</h3>
+                <p>Upload your podcast shows and episodes to reach millions of eager listeners across India.</p>
+            </div>
+            <div class="feature-card">
+                <div class="card-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h3>Investors</h3>
+                <p>Fund exclusive music and podcast productions and earn a share of the revenue generated from streaming.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section" id="form-section">
+        
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-target="music-creator">Music Creator Submission</button>
+            <button class="tab-btn" data-target="podcast-creator">Podcast Creator Submission</button>
+            <button class="tab-btn" data-target="production-support">Production Support Request</button>
+            <button class="tab-btn" data-target="investor-registration">Investor Registration</button>
+        </div>
+
+        <div class="forms-container">
+            
+            <form id="music-creator" class="prod-form active">
+                <div class="form-header">
+                    <h3>Music Creator Submission</h3>
+                    <p>For independent artists to submit music content for publishing.</p>
+                </div>
+                
+                <fieldset>
+                    <legend>Creator Information</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" required placeholder="Enter full name">
+                        </div>
+                        <div class="input-group">
+                            <label>Artist Name / Stage Name</label>
+                            <input type="text" required placeholder="Enter artist name">
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" required placeholder="name@example.com">
+                        </div>
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input type="tel" required placeholder="+91 ">
+                        </div>
+                        <div class="input-group">
+                            <label>City</label>
+                            <input type="text" required placeholder="City">
+                        </div>
+                        <div class="input-group">
+                            <label>Country</label>
+                            <input type="text" required placeholder="Country">
+                        </div>
+                        <div class="input-group full-width">
+                            <label>Creator Profile Photo</label>
+                            <div class="file-upload">
+                                <input type="file" accept="image/*" class="img-input" id="music-profile-pic">
+                                <label for="music-profile-pic"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Photo</label>
+                                <div class="preview-area"></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Social Media & Type</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Instagram Link</label>
+                            <input type="url" placeholder="https://instagram.com/...">
+                        </div>
+                        <div class="input-group">
+                            <label>YouTube Link</label>
+                            <input type="url" placeholder="https://youtube.com/...">
+                        </div>
+                        <div class="input-group">
+                            <label>Spotify Link</label>
+                            <input type="url" placeholder="https://spotify.com/...">
+                        </div>
+                        <div class="input-group">
+                            <label>Creator Type</label>
+                            <select required>
+                                <option value="">Select Type</option>
+                                <option>Singer</option>
+                                <option>Rap Artist</option>
+                                <option>Music Composer</option>
+                                <option>Music Producer</option>
+                                <option>Independent Artist</option>
+                                <option>Band / Group</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Music Details & Metadata</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Song / Album Title</label>
+                            <input type="text" required placeholder="Title">
+                        </div>
+                        <div class="input-group">
+                            <label>Music Type</label>
+                            <select required>
+                                <option>Song</option>
+                                <option>Rap</option>
+                                <option>Instrumental</option>
+                                <option>BGM</option>
+                                <option>Storytelling Audio</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Release Type</label>
+                            <select required>
+                                <option>Single Song</option>
+                                <option>Album</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Language</label>
+                            <input type="text" required placeholder="e.g. Tamil, Hindi">
+                        </div>
+                        <div class="input-group">
+                            <label>Genre</label>
+                            <input type="text" required placeholder="e.g. Rap, Pop">
+                        </div>
+                        <div class="input-group">
+                            <label>Tags</label>
+                            <input type="text" placeholder="rap, tamil rap, hip-hop">
+                        </div>
+                        <div class="input-group">
+                            <label>Song Duration</label>
+                            <input type="text" placeholder="e.g. 3:45">
+                        </div>
+                        <div class="input-group">
+                            <label>Release Year</label>
+                            <input type="number" placeholder="2026">
+                        </div>
+                        <div class="input-group">
+                            <label>Composer Name</label>
+                            <input type="text" placeholder="Composer">
+                        </div>
+                        <div class="input-group">
+                            <label>Lyricist Name</label>
+                            <input type="text" placeholder="Lyricist">
+                        </div>
+                        <div class="input-group full-width">
+                            <label>Featuring Artists (optional)</label>
+                            <input type="text" placeholder="Comma separated names">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Content Upload</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Song Cover Image / Album Artwork</label>
+                            <div class="file-upload">
+                                <input type="file" accept="image/*" class="img-input" id="music-cover-pic">
+                                <label for="music-cover-pic"><i class="fa-solid fa-image"></i> Upload Artwork</label>
+                                <div class="preview-area"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Audio File (MP3/WAV) or Folder Link</label>
+                            <div class="file-upload">
+                                <input type="file" accept="audio/*">
+                                <label><i class="fa-solid fa-file-audio"></i> Upload Audio</label>
+                            </div>
+                            <input type="url" placeholder="Or provide Google Drive / Dropbox Link" style="margin-top: 10px;">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Description</legend>
+                    <div class="input-group full-width">
+                        <label>Song / Album Description</label>
+                        <textarea rows="3" placeholder="Describe your music..."></textarea>
+                    </div>
+                    <div class="input-group full-width">
+                        <label>Inspiration or Story Behind the Song</label>
+                        <textarea rows="3" placeholder="What inspired this track?"></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="music-rights" required>
+                    <label for="music-rights">I confirm that this music is original and I own the rights to distribute this content on the platform.</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Music</button>
+            </form>
+
+            <form id="podcast-creator" class="prod-form">
+                <div class="form-header">
+                    <h3>Podcast Creator Submission</h3>
+                    <p>Submit podcast shows and episodes to the platform.</p>
+                </div>
+                
+                <fieldset>
+                    <legend>Creator Information</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Podcast Host Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input type="tel" required>
+                        </div>
+                        <div class="input-group">
+                            <label>City & Country</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Creator Profile Photo</label>
+                            <div class="file-upload">
+                                <input type="file" accept="image/*" class="img-input" id="pod-profile-pic">
+                                <label for="pod-profile-pic"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Photo</label>
+                                <div class="preview-area"></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Podcast Channel & Details</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Podcast Channel Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Podcast Category</label>
+                            <select required>
+                                <option>Technology</option>
+                                <option>Entertainment</option>
+                                <option>Education</option>
+                                <option>Health</option>
+                                <option>Entrepreneurship</option>
+                                <option>Science</option>
+                                <option>Lifestyle</option>
+                                <option>Sports</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Podcast Title</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Episode Title & Number</label>
+                            <input type="text" placeholder="e.g. Ep 12: The Future of AI">
+                        </div>
+                        <div class="input-group">
+                            <label>Language</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Release Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="input-group full-width">
+                            <label>Episode Description</label>
+                            <textarea rows="3"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Content Upload</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Podcast Cover Image (Square Card)</label>
+                            <div class="file-upload">
+                                <input type="file" accept="image/*" class="img-input" id="pod-cover-pic">
+                                <label for="pod-cover-pic"><i class="fa-solid fa-image"></i> Upload Artwork</label>
+                                <div class="preview-area"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Audio File Upload</label>
+                            <div class="file-upload">
+                                <input type="file" accept="audio/*">
+                                <label><i class="fa-solid fa-file-audio"></i> Upload Audio</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="pod-rights" required>
+                    <label for="pod-rights">I confirm that the submitted podcast content is original.</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Podcast</button>
+            </form>
+
+            <form id="production-support" class="prod-form">
+                <div class="form-header">
+                    <h3>Production Support & Investment Request</h3>
+                    <p>Request investment support for producing your audio projects.</p>
+                </div>
+                
+                <fieldset>
+                    <legend>Creator & Project Information</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Full Name / Artist Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email & Phone</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Project Title</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Project Type</label>
+                            <select required>
+                                <option>Song</option>
+                                <option>Album</option>
+                                <option>Rap Track</option>
+                                <option>Podcast Series</option>
+                                <option>Storytelling Audio</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Project Details & Requirements</legend>
+                    <div class="input-grid">
+                        <div class="input-group full-width">
+                            <label>Detailed Concept & Expected Audience</label>
+                            <textarea rows="3" placeholder="Explain your vision and who will listen to it..."></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label>Estimated Production Budget (₹)</label>
+                            <input type="number" required placeholder="e.g. 50000">
+                        </div>
+                        <div class="input-group">
+                            <label>Production Needs</label>
+                            <select required>
+                                <option>Studio Recording</option>
+                                <option>Music Production</option>
+                                <option>Mixing & Mastering</option>
+                                <option>Musicians</option>
+                                <option>Marketing Support</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Production Start Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="input-group">
+                            <label>Estimated Release Date</label>
+                            <input type="date">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sample Content</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Demo Audio Upload</label>
+                            <div class="file-upload">
+                                <input type="file" accept="audio/*">
+                                <label><i class="fa-solid fa-file-audio"></i> Upload Demo</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>YouTube / Portfolio Link</label>
+                            <input type="url" placeholder="https://...">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-submit">Submit Proposal</button>
+            </form>
+
+            <form id="investor-registration" class="prod-form">
+                <div class="form-header">
+                    <h3>Investor Registration</h3>
+                    <p>Fund exclusive music and podcast projects and share revenue.</p>
+                </div>
+                
+                <fieldset>
+                    <legend>Investor Information</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input type="tel" required>
+                        </div>
+                        <div class="input-group">
+                            <label>City / Country</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group full-width">
+                            <label>Occupation</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Investment Preferences & Experience</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Investment Range</label>
+                            <select required>
+                                <option>₹50,000 – ₹1,00,000</option>
+                                <option>₹1,00,000 – ₹3,00,000</option>
+                                <option>₹3,00,000 – ₹5,00,000</option>
+                                <option>₹5,00,000+</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Preferred Project Types</label>
+                            <select required>
+                                <option>Any Project</option>
+                                <option>Songs</option>
+                                <option>Albums</option>
+                                <option>Rap Projects</option>
+                                <option>Podcasts</option>
+                            </select>
+                        </div>
+                        <div class="input-group full-width">
+                            <label>Previous Investment Experience</label>
+                            <textarea rows="2" placeholder="Briefly describe..."></textarea>
+                        </div>
+                        <div class="input-group full-width">
+                            <label>Investment Interest Notes</label>
+                            <textarea rows="2" placeholder="Any specific goals or genres?"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Identity Verification</legend>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Upload Government ID</label>
+                            <div class="file-upload">
+                                <input type="file" required>
+                                <label><i class="fa-solid fa-id-card"></i> Upload ID</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Upload PAN Card (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file">
+                                <label><i class="fa-solid fa-id-badge"></i> Upload PAN</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-submit">Submit Investor Application</button>
+            </form>
+
+        </div>
+    </section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:14px">
+        <img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+      </div>
+      <p class="footer-desc">India's premier digital audio streaming platform for podcasts, music, rap, and storytelling. Stream in 6 languages.</p>
+      <div class="social-links">
+        <a class="social-link" href="#">𝕏</a>
+        <a class="social-link" href="#">in</a>
+        <a class="social-link" href="#">▶</a>
+        <a class="social-link" href="#">📷</a>
+        <a class="social-link" href="#">💬</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <a class="footer-link" href="#">Home</a>
+      <a class="footer-link" href="#">Podcasts</a>
+      <a class="footer-link" href="#">Music</a>
+      <a class="footer-link" href="#">Creators</a>
+      <a class="footer-link" href="#">Production</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <a class="footer-link" href="#">About Us</a>
+      <a class="footer-link" href="#">Careers</a>
+      <a class="footer-link" href="#">Press</a>
+      <a class="footer-link" href="#">Blog</a>
+      <a class="footer-link" href="#">Contact Us</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <a class="footer-link" href="#">Help Center</a>
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Terms & Conditions</a>
+      <a class="footer-link" href="#">Cookie Policy</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Creators</div>
+      <a class="footer-link" href="#">Become a Creator</a>
+      <a class="footer-link" href="#">Podcast Studio</a>
+      <a class="footer-link" href="#">Upload Music</a>
+      <a class="footer-link" href="#">Investor Portal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Thala Nivitham. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a class="footer-link" style="margin:0" href="#">Privacy</a>
+      <a class="footer-link" style="margin:0" href="#">Terms</a>
+      <a class="footer-link" style="margin:0" href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+    <div class="popup-overlay" id="success-popup">
+        <div class="popup-box">
+            <i class="fa-solid fa-circle-check popup-icon"></i>
+            <h3>Submitted Successfully</h3>
+            <p>Your details have been received. Our team will review and get back to you shortly.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="js/production.js"></script>
+</body>
+</html>

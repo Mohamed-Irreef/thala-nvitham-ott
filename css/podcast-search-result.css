@@ -1,0 +1,200 @@
+/* =====================================================
+   Thala Nivitham — Podcast Search Result Page
+   ===================================================== */
+
+/* ── Main layout ── */
+.psr-main {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: calc(var(--nav-height, 90px) + 48px) 40px 80px;
+}
+
+/* ── Search Context Header ── */
+.psr-header {
+  margin-bottom: 40px;
+}
+
+.psr-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.psr-heading {
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.psr-subtext {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* ── Category Tab Bar ── */
+.psr-tabs-wrapper {
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.psr-tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 0;
+  scrollbar-width: none;
+}
+
+.psr-tabs::-webkit-scrollbar { display: none; }
+
+.psr-tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 12px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.psr-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.psr-tab-btn.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Results Grid ── */
+.psr-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  min-height: 300px;
+}
+
+/* Card fade-in animation when loaded */
+.psr-grid .content-card {
+  animation: psr-fadeIn 0.3s ease both;
+}
+
+@keyframes psr-fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Stagger animation delays for first batch */
+.psr-grid .content-card:nth-child(1)  { animation-delay: 0.02s; }
+.psr-grid .content-card:nth-child(2)  { animation-delay: 0.04s; }
+.psr-grid .content-card:nth-child(3)  { animation-delay: 0.06s; }
+.psr-grid .content-card:nth-child(4)  { animation-delay: 0.08s; }
+.psr-grid .content-card:nth-child(5)  { animation-delay: 0.10s; }
+.psr-grid .content-card:nth-child(6)  { animation-delay: 0.12s; }
+.psr-grid .content-card:nth-child(7)  { animation-delay: 0.14s; }
+.psr-grid .content-card:nth-child(8)  { animation-delay: 0.16s; }
+.psr-grid .content-card:nth-child(9)  { animation-delay: 0.18s; }
+.psr-grid .content-card:nth-child(10) { animation-delay: 0.20s; }
+.psr-grid .content-card:nth-child(11) { animation-delay: 0.22s; }
+.psr-grid .content-card:nth-child(12) { animation-delay: 0.24s; }
+
+/* ── Empty state ── */
+.psr-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-muted);
+}
+
+.psr-empty i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+  opacity: 0.4;
+}
+
+.psr-empty p {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+/* ── Load More ── */
+.psr-load-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.psr-load-more-btn {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 12px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.psr-load-more-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.psr-load-more-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.psr-load-more-btn.loading::after {
+  content: '…';
+  animation: dots 1s infinite;
+}
+
+@keyframes dots {
+  0%   { content: '…'; }
+  33%  { content: '.'; }
+  66%  { content: '..'; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1280px) {
+  .psr-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .psr-main { padding-left: 24px; padding-right: 24px; }
+  .psr-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .psr-main { padding-left: 16px; padding-right: 16px; }
+  .psr-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .psr-heading { font-size: 28px; }
+}
+
+@media (max-width: 540px) {
+  .psr-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .psr-tab-btn { padding: 10px 14px; font-size: 13px; }
+}
+
+@media (max-width: 360px) {
+  .psr-grid { grid-template-columns: 1fr; }
+}

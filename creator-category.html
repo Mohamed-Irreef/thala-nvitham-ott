@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="assets/logo-icon.png"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Browse Creators — Thala Nivitham</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/creators.css"/>
+  <link rel="stylesheet" href="css/creator-category.css"/>
+</head>
+<body>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <div id="navbar-placeholder"></div>
+  <script src="js/navbar.js"></script>
+
+  <main class="cc-main">
+
+    <!-- Page Header -->
+    <div class="cc-header">
+      <div class="cc-breadcrumb">
+        <a href="creators.html"><i class="fa-solid fa-chevron-left fa-xs"></i> Creators</a>
+        <span class="cc-breadcrumb-sep">/</span>
+        <span id="cc-category-title">All Creators</span>
+      </div>
+      <h1 class="cc-page-title" id="cc-page-heading">All Creators</h1>
+      <p class="cc-page-sub" id="cc-page-sub">Discover all creators on Thala Nivitham</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="cc-tabs-wrapper">
+      <div class="cc-tabs" id="cc-tabs">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Creator Grid + Load More -->
+    <div class="cc-content">
+      <div class="creator-grid" id="cc-grid">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="cc-load-more-wrapper">
+        <button class="cc-load-more-btn" id="cc-load-more-btn">
+          <i class="fa-solid fa-rotate-right"></i> Load More
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/creator-category.js"></script>
+
+</body>
+</html>

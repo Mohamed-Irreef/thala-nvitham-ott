@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/png" href="../assets/logo-icon.png"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Audio Details — Thala Nivitham</title>
+<meta name="description" content="Audio content details page for Thala Nivitham streaming platform."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/details.css"/>
+<link rel="stylesheet" href="../css/player.css"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+      </a>
+      <ul class="nav-links">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="../podcast.html">Podcasts</a>
+          <div class="mega-menu">
+            <div class="mega-menu-content">
+              <div class="mega-column">
+                <h4>Genres</h4>
+                <a href="#">Technology</a>
+                <a href="#">Entrepreneurship</a>
+                <a href="#">Health Care</a>
+                <a href="#">Arts & Science</a>
+                <a href="#">Education</a>
+                <a href="#">Sports</a>
+                <a href="#">Current Affairs</a>
+              </div>
+              <div class="mega-column">
+                <h4>Discover</h4>
+                <a href="#">Trending Podcasts</a>
+                <a href="#">Latest Episodes</a>
+                <a href="#">Top Shows</a>
+                <a href="#">Featured Podcasts</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../musics.html">Music</a>
+          <div class="mega-menu">
+            <div class="mega-menu-content">
+              <div class="mega-column">
+                <h4>Categories</h4>
+                <a href="#">Songs</a>
+                <a href="#">Albums</a>
+                <a href="#">Rap</a>
+                <a href="#">BGM</a>
+                <a href="#">Instrumental</a>
+                <a href="#">Storytelling Audio</a>
+              </div>
+              <div class="mega-column">
+                <h4>Discover</h4>
+                <a href="#">Trending Songs</a>
+                <a href="#">New Releases</a>
+                <a href="#">Top Artists</a>
+                <a href="#">Featured Albums</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../creators.html">Creators</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#investor">Production</a></li>
+        <li class="nav-item"><a class="nav-link" href="../library.html">Library</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input id="searchInput" class="search-input" type="text" placeholder="Search podcasts, music, creators…"/>
+          <div id="searchDropdown" class="search-dropdown">
+            <div class="search-section-title">Suggestions</div>
+            <div class="search-suggestion"><div class="sug-icon"></div>Search All</div>
+          </div>
+        </div>
+        <button class="btn btn-outline">Get App</button>
+        <button class="btn btn-primary">⚡ Subscribe</button>
+        <div class="avatar">TN</div>
+      </div>
+    </nav>
+
+<!-- Back button -->
+<button class="det-back" onclick="history.back()"><i class="fa-solid fa-chevron-left fa-xs"></i> Back</button>
+
+<main>
+  <!-- Hero Section -->
+  <section class="details-hero">
+    <div class="details-hero-bg" id="heroBg"></div>
+    <div class="details-hero-overlay"></div>
+    <div class="details-hero-content">
+      <img class="det-cover" id="heroImage" src="../assets/music-cover1.png" alt="Cover"/>
+      <div class="det-info">
+        <div class="det-type-badge" id="heroBadge">Episode</div>
+        <h1 class="det-title" id="heroTitle">Startup Secrets</h1>
+        <div class="det-meta-row">
+          <strong id="heroCreator">Chef Senthil</strong>
+          <span class="meta-dot"><i class="fa-solid fa-circle"></i></span>
+          <span>Podcast Host</span>
+          <span class="meta-dot"><i class="fa-solid fa-circle"></i></span>
+          <span>45 min</span>
+          <span class="meta-dot"><i class="fa-solid fa-circle"></i></span>
+          <span>Tamil</span>
+        </div>
+        <div class="det-tags" id="heroTags">
+          <span class="det-tag">Business</span>
+          <span class="det-tag">Technology</span>
+        </div>
+        <div class="det-hero-actions">
+          <button class="btn-play-large" id="heroPlayBtn" onclick="playCurrentAudio()"><i class="fa-solid fa-play"></i> Play</button>
+          <button class="btn-icon-outline" title="Add to Playlist"><i class="fa-solid fa-plus"></i></button>
+          <button class="btn-icon-outline" title="Like"><i class="fa-solid fa-heart"></i></button>
+          <button class="btn-icon-outline" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+          <button class="btn-icon-outline" title="Download"><i class="fa-solid fa-download"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body Grid -->
+  <div class="container det-main-grid">
+    
+    <!-- Left Column (Content) -->
+    <div class="det-left-col">
+      <!-- Description -->
+      <section class="det-section details-description">
+        <h2 class="det-section-title">About Episode</h2>
+        <p class="det-about-text" id="bodyDesc">
+          Startup Secrets is a premium audio experience crafted exclusively for Thala Nivitham listeners. In this episode we deep dive into the foundational blocks of building a tech startup from ground zero in India.
+        </p>
+      </section>
+
+      <!-- Related Content (Shared) -->
+      <section class="det-section related-content">
+        <h2 class="det-section-title" id="relatedTitle">Related Episodes</h2>
+        <div class="cards-row" id="relatedRow">
+          <!-- Populated via JS -->
+        </div>
+      </section>
+    </div>
+    
+  </div>
+</main>
+
+<!-- Global Sticky Player Native Simulation -->
+<div id="global-player-root"></div>
+
+<script src="../js/script.js"></script>
+<script src="../js/details.js"></script>
+
+<!-- Inject Modular Audio Simulation Player Logic -->
+<script src="../player/playerState.js"></script>
+<script src="../player/queueManager.js"></script>
+<script src="../player/audioPlayer.js"></script>
+<script src="../components/bottomPlayer.js"></script>
+<script src="../components/sidePanel.js"></script>
+<script src="../components/queueView.js"></script>
+<script src="../components/timeline.js"></script>
+<script src="../player/playerUI.js"></script>
+
+<script>
+  // Spin up global UX player layer
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof initializePlayer === 'function') {
+      initializePlayer();
+    }
+  });
+</script>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:14px">
+        <img src="../assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+      </div>
+      <p class="footer-desc">India's premier digital audio streaming platform for podcasts, music, rap, and storytelling. Stream in 6 languages.</p>
+      <div class="social-links">
+        <a class="social-link" href="#">𝕏</a>
+        <a class="social-link" href="#">in</a>
+        <a class="social-link" href="#">▶</a>
+        <a class="social-link" href="#">📷</a>
+        <a class="social-link" href="#">💬</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <a class="footer-link" href="#">Home</a>
+      <a class="footer-link" href="#">Podcasts</a>
+      <a class="footer-link" href="#">Music</a>
+      <a class="footer-link" href="#">Creators</a>
+      <a class="footer-link" href="#">Production</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <a class="footer-link" href="#">About Us</a>
+      <a class="footer-link" href="#">Careers</a>
+      <a class="footer-link" href="#">Press</a>
+      <a class="footer-link" href="#">Blog</a>
+      <a class="footer-link" href="#">Contact Us</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <a class="footer-link" href="#">Help Center</a>
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Terms & Conditions</a>
+      <a class="footer-link" href="#">Cookie Policy</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Creators</div>
+      <a class="footer-link" href="#">Become a Creator</a>
+      <a class="footer-link" href="#">Podcast Studio</a>
+      <a class="footer-link" href="#">Upload Music</a>
+      <a class="footer-link" href="#">Investor Portal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Thala Nivitham. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a class="footer-link" style="margin:0" href="#">Privacy</a>
+      <a class="footer-link" style="margin:0" href="#">Terms</a>
+      <a class="footer-link" style="margin:0" href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

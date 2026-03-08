@@ -1,0 +1,190 @@
+/* =============================================================
+   css/player.css
+   Global styling for the Bottom Player & Right Side Queue
+============================================================= */
+
+/* ── Bottom Player Container ── */
+.global-bottom-player {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 90px;
+  background-color: #0b0b0f;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 9999;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+/* ── Player Sections ── */
+.gp-left {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.gp-center {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.gp-right {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+/* ── Left Content ── */
+.gp-left img {
+  width: 56px; height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.gp-info h4 {
+  font-size: 14px; margin-bottom: 2px;
+  font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 180px;
+}
+.gp-info p {
+  font-size: 11px; color: #a0a0b0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px;
+}
+
+/* ── Center Controls ── */
+.gp-controls {
+  display: flex; align-items: center; gap: 20px;
+}
+.gp-icon-btn {
+  background: none; border: none; color: #a0a0b0;
+  font-size: 15px; cursor: pointer; transition: 0.2s;
+  font-weight: 700;
+}
+.gp-icon-btn:hover { color: #fff; transform: scale(1.1); }
+.gp-play-btn {
+  background: #fff; color: #0b0b0f;
+  width: 34px; height: 34px; border-radius: 50%;
+  border: none; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: 0.2s;
+}
+.gp-play-btn:hover { transform: scale(1.1); box-shadow: 0 0 10px rgba(255,255,255,0.3); }
+
+/* ── Seek Bar & Volume ── */
+.gp-playback-bar {
+  display: flex; align-items: center; gap: 10px; width: 100%; max-width: 600px;
+}
+.gp-time { font-size: 11px; color: #a0a0b0; min-width: 35px; text-align: center; }
+.gp-progress-container {
+  flex: 1; height: 4px; background: rgba(255,255,255,0.15);
+  border-radius: 2px; cursor: pointer; position: relative;
+  transition: height 0.1s;
+}
+.gp-progress-container:hover { height: 6px; }
+.gp-progress-container:hover .gp-progress-fill { background: #8a5cff; }
+.gp-progress-fill {
+  height: 100%; background: #fff; border-radius: 2px; transition: width 0.1s linear;
+}
+
+/* ── Right Content ── */
+.gp-volume-wrapper {
+  display: flex; align-items: center; gap: 8px; width: 110px;
+}
+.gp-volume { width: 100%; }
+#gp-speed-btn { border: 1px solid rgba(255,255,255,0.3); padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+
+/* ── Right Side Panel ── */
+.global-side-panel {
+  position: fixed;
+  top: 70px; right: -400px; /* Hidden off-screen initially */
+  width: 360px;
+  height: calc(100vh - 70px - 90px);
+  background: #0b0b0f;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  z-index: 1500;
+  padding: 24px;
+  overflow-y: auto;
+  transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.global-side-panel.active {
+  right: 0;
+}
+.global-side-panel::-webkit-scrollbar { width: 6px; }
+.global-side-panel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+
+/* ── Panel Header & Image ── */
+.gsp-header {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;
+}
+.gsp-header h3 { font-size: 16px; font-weight: 700; }
+.gsp-close { background: none; border: none; color: #a0a0b0; font-size: 20px; cursor: pointer; transition: 0.2s;}
+.gsp-close:hover { color: #fff; }
+
+.gsp-now-playing { margin-bottom: 24px; text-align: left; }
+.gsp-now-playing img {
+  width: 100%; aspect-ratio: 1/1; object-fit: cover;
+  border-radius: 8px; margin-bottom: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.gsp-now-playing h2 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.gsp-now-playing p { font-size: 14px; color: #a0a0b0; }
+
+/* ── Panel Actions ── */
+.gsp-actions {
+  display: flex; justify-content: space-between; margin-bottom: 30px;
+}
+.gsp-action-btn {
+  background: #15151c; border: 1px solid rgba(255,255,255,0.05); color: #fff;
+  width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+  transition: 0.3s; display: flex; align-items: center; justify-content: center;
+}
+.gsp-action-btn:hover { background: #8a5cff; transform: scale(1.1); box-shadow: 0 4px 15px rgba(138,92,255,0.4); }
+
+/* ── Panel Sections ── */
+.gsp-section {
+  background: #15151c; padding: 16px; border-radius: 12px; margin-bottom: 16px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.gsp-section h4 { font-size: 14px; font-weight: 600; margin-bottom: 14px; color: #fff; }
+
+.gsp-artist-card { display: flex; align-items: center; justify-content: space-between; }
+.gac-name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+.gac-stats { font-size: 12px; color: #a0a0b0; }
+.gac-follow {
+  background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff;
+  padding: 4px 12px; border-radius: 20px; font-size: 12px; cursor: pointer; transition: 0.2s;
+}
+.gac-follow:hover { border-color: #fff; }
+
+/* ── Queue Items & Timelines ── */
+#gsp-queue-list { display: flex; flex-direction: column; gap: 8px; }
+.queue-item {
+  display: flex; align-items: center; gap: 12px; padding: 8px;
+  background: rgba(255,255,255,0.02); border-radius: 6px; transition: 0.2s;
+}
+.queue-item:hover { background: rgba(255,255,255,0.08); }
+.queue-item img { width: 44px; height: 44px; border-radius: 4px; object-fit: cover; }
+.qi-info { flex: 1; overflow: hidden; }
+.qi-info h5 { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qi-info p { font-size: 11px; color: #a0a0b0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qi-actions { display: flex; align-items: center; }
+.qi-remove { background: none; border: none; color: #a0a0b0; cursor: pointer; padding: 4px; }
+.qi-remove:hover { color: #f87171; }
+.qi-add { background: none; border: 1px solid #8a5cff; color: #8a5cff; width: 24px; height: 24px; border-radius: 50%; font-size: 10px; cursor: pointer; }
+
+/* ── Podcast Timeline Elements ── */
+.timeline-list { display: flex; flex-direction: column; gap: 10px; }
+.timeline-chap {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; padding: 8px 12px; background: rgba(255,255,255,0.03);
+  border-radius: 6px; cursor: pointer; transition: 0.2s;
+}
+.timeline-chap:hover { background: #8a5cff; }
+.chap-time { font-family: monospace; color: rgba(255,255,255,0.6); }
+.timeline-chap:hover .chap-time { color: #fff; }

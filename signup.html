@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala Nivitham - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+<body>
+    <div class="split-layout">
+        
+        <section class="banner-section">
+            <div class="banner-track" id="bannerTrack">
+                </div>
+            <div class="banner-overlay"></div>
+            
+            <div class="banner-content">
+                <div class="accent-line">
+                    <h1 id="bannerHeading">Play thousands of audiobooks, stories, and podcasts.</h1>
+                </div>
+                <p id="bannerSubtext">Listen to your favorite audio stories, audiobooks, and podcasts anytime, anywhere.</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <button class="skip-btn" onclick="window.location.href='#'">Skip</button>
+
+            <div class="glass-card">
+                
+                <div class="form-header">
+                    <div class="icon-container" id="headerIcon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    </div>
+                    <h2 id="formTitle">Enter your mobile number</h2>
+                    <p id="formSubtitle">We will send an SMS with a 4-digit OTP</p>
+                </div>
+
+                <form id="authForm" onsubmit="handleSendOTP(event)">
+                    
+                    <div class="input-group" id="inputContainer">
+                        <div class="mobile-input-wrapper">
+                            <div class="country-code">
+                                <span class="flag">🇮🇳</span>
+                                <span>(+91)</span>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <input type="tel" id="mobileInput" placeholder="Enter Mobile no." required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="primary-btn" id="submitBtn">Send OTP</button>
+
+                    <div class="divider">
+                        <span>Or continue with</span>
+                    </div>
+
+                    <div class="social-grid">
+                        <button type="button" class="social-btn" id="toggleMethodBtn" onclick="toggleAuthMethod()">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="#ef4444" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span>Email</span>
+                        </button>
+                        <button type="button" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="#4285F4" stroke-width="2" fill="none"><path d="M21.64,12.2045 C21.64,11.3323 21.5627,10.6359 21.3927,9.9245 L12,9.9245 L12,14.3686 L17.5145,14.3686 C17.36,15.6536 16.5255,17.4114 14.8873,18.5709 L14.8873,21.4395 L18.0691,21.4395 C19.9855,19.605 21.64,16.2736 21.64,12.2045 Z" fill="#4285F4" stroke="none"></path><path d="M12,22 C14.7127,22 16.9927,21.0664 18.6836,19.4395 L15.5018,16.5709 C14.6364,17.18 13.4327,17.6259 12,17.6259 C9.1255,17.6259 6.6927,15.6027 5.8091,12.8718 L2.5182,12.8718 L2.5182,15.5245 C4.2582,19.1305 7.84,22 12,22 Z" fill="#34A853" stroke="none"></path><path d="M5.8091,12.8718 C5.5773,12.15 5.4382,11.3836 5.4382,10.5986 C5.4382,9.8136 5.5773,9.0473 5.8091,8.3255 L5.8091,5.6727 L2.5182,5.6727 C1.8073,7.15 1.3909,8.8182 1.3909,10.5986 C1.3909,12.3791 1.8073,14.0473 2.5182,15.5245 L5.8091,12.8718 Z" fill="#FBBC05" stroke="none"></path><path d="M12,3.5741 C13.8836,3.5741 15.3127,4.4173 16.14,5.2341 L18.7709,2.5027 C16.9845,0.7627 14.7045,0 12,0 C7.84,0 4.2582,2.8695 2.5182,6.4755 L5.8091,9.1282 C6.6927,6.3973 9.1255,3.5741 12,3.5741 Z" fill="#EA4335" stroke="none"></path></svg>
+                            <span>Google</span>
+                        </button>
+                        <button type="button" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="#1877F2" stroke-width="2" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="#1877F2" stroke="none"></path></svg>
+                            <span>Facebook</span>
+                        </button>
+                        <button type="button" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="#ffffff" stroke-width="2" fill="#ffffff"><path d="M12 2.04C10.5 2.04 9 3.12 8.7 4.62c-.12.48 0 1.02.18 1.44.18.42.54.78.96.96.42.18.96.3 1.44.18 1.5-.3 2.58-1.8 2.58-3.3 0-.48-.12-.96-.3-1.44-.18-.42-.54-.78-.96-.96-.42-.18-.96-.3-1.44-.18H12zm-3.36 4.68C7.02 6.72 5.28 7.8 4.2 9.54c-2.4 4.02-1.02 9.78 1.32 13.08 1.14 1.62 2.58 3.36 4.38 3.36 1.74 0 2.64-1.08 4.74-1.08 2.1 0 3 .96 4.68 1.02 1.86.06 3.06-1.5 4.14-3.06 1.32-1.92 1.86-3.78 1.92-3.9-.06-.06-3.66-1.38-3.66-5.58 0-3.48 2.82-5.16 2.94-5.22-1.62-2.4-4.14-2.7-5.04-2.76-2.16-.18-4.26 1.32-5.34 1.32-1.08 0-2.82-1.26-4.62-1.2z"></path></svg>
+                            <span>Apple</span>
+                        </button>
+                    </div>
+
+                    <div class="footer-text">
+                        By proceeding, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Services</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:14px">
+        <img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+      </div>
+      <p class="footer-desc">India's premier digital audio streaming platform for podcasts, music, rap, and storytelling. Stream in 6 languages.</p>
+      <div class="social-links">
+        <a class="social-link" href="#">𝕏</a>
+        <a class="social-link" href="#">in</a>
+        <a class="social-link" href="#">▶</a>
+        <a class="social-link" href="#">📷</a>
+        <a class="social-link" href="#">💬</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <a class="footer-link" href="#">Home</a>
+      <a class="footer-link" href="#">Podcasts</a>
+      <a class="footer-link" href="#">Music</a>
+      <a class="footer-link" href="#">Creators</a>
+      <a class="footer-link" href="#">Production</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <a class="footer-link" href="#">About Us</a>
+      <a class="footer-link" href="#">Careers</a>
+      <a class="footer-link" href="#">Press</a>
+      <a class="footer-link" href="#">Blog</a>
+      <a class="footer-link" href="#">Contact Us</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <a class="footer-link" href="#">Help Center</a>
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Terms & Conditions</a>
+      <a class="footer-link" href="#">Cookie Policy</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Creators</div>
+      <a class="footer-link" href="#">Become a Creator</a>
+      <a class="footer-link" href="#">Podcast Studio</a>
+      <a class="footer-link" href="#">Upload Music</a>
+      <a class="footer-link" href="#">Investor Portal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Thala Nivitham. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a class="footer-link" style="margin:0" href="#">Privacy</a>
+      <a class="footer-link" style="margin:0" href="#">Terms</a>
+      <a class="footer-link" style="margin:0" href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+    <script src="./js/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* =====================================================
+   Thala Nivitham — details.css
+   OTT-Style UI for Audio & Playlist Details
+   ===================================================== */
+:root {
+  --det-bg: #0b0b0f;
+  --det-card: #15151c;
+  --det-hover: #1e1e28;
+  --det-accent: #00A8E1;
+  --det-text: #ffffff;
+  --det-text-sec: #a0a0b0;
+  --det-border: rgba(255, 255, 255, 0.08);
+}
+
+body { padding-bottom: 100px; background-color: var(--det-bg); color: var(--det-text); }
+
+.container { padding: 0 40px 40px; max-width: 1600px; margin: 0 auto; }
+
+/* ── Hero Section ── */
+.details-hero {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  margin-top: 70px; /* Below navbar */
+}
+.details-hero-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  filter: blur(50px) brightness(0.4);
+  transform: scale(1.1);
+  z-index: -2;
+}
+.details-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, var(--det-bg) 0%, rgba(11,11,15,0.4) 100%);
+  z-index: -1;
+}
+.details-hero-content {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.det-cover {
+  width: 240px; height: 240px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+.det-info { flex: 1; min-width: 0; }
+.det-type-badge {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--det-text-sec);
+  margin-bottom: 12px;
+}
+.det-title {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.det-meta-row {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  font-size: 14px; color: var(--det-text-sec); font-weight: 500;
+  margin-bottom: 24px;
+}
+.det-meta-row strong { color: var(--det-text); cursor: pointer; }
+.det-meta-row strong:hover { text-decoration: underline; }
+.meta-dot { font-size: 10px; opacity: 0.5; }
+
+/* Tags */
+.det-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.det-tag {
+  font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px;
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: var(--det-text);
+}
+
+/* Action Buttons */
+.det-hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.btn-play-large {
+  background: var(--det-accent); color: white;
+  font-size: 15px; font-weight: 700;
+  padding: 14px 32px; border-radius: 30px;
+  border: none; cursor: pointer;
+  display: flex; align-items: center; gap: 10px;
+  transition: 0.2s;
+}
+.btn-play-large:hover { transform: scale(1.05); background: #0BB3F0; box-shadow: 0 0 20px rgba(0, 168, 225, 0.4); }
+
+.btn-icon-outline {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: transparent; border: 1px solid var(--det-text-sec);
+  color: var(--det-text); font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: 0.2s;
+}
+.btn-icon-outline:hover { border-color: var(--det-text); transform: scale(1.05); background: rgba(255,255,255,0.05); }
+
+/* ── Main Grid Layout ── */
+.det-main-grid {
+  display: block; /* Removed right column, full width layout */
+  margin-top: 30px;
+}
+
+/* ── Sections ── */
+.det-section-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; color: var(--det-text); }
+.det-about-text { font-size: 15px; color: var(--det-text-sec); line-height: 1.6; max-width: 800px; margin-bottom: 40px; }
+
+/* ── Track / Episode List Table ── */
+.episode-list { width: 100%; border-collapse: collapse; text-align: left; }
+.episode-list th {
+  color: var(--det-text-sec); font-size: 12px; font-weight: 500; text-transform: uppercase;
+  padding: 12px 16px; border-bottom: 1px solid var(--det-border);
+}
+.episode-list td { padding: 12px 16px; color: var(--det-text-sec); font-size: 14px; }
+.episode-row { transition: 0.2s; cursor: pointer; border-radius: 8px; }
+.episode-row:hover { background: var(--det-hover); }
+.episode-row:hover td { color: var(--det-text); }
+.ep-num { width: 40px; text-align: center; }
+.ep-title-col { color: var(--det-text); font-weight: 500; font-size: 15px; }
+.ep-dur { width: 80px; text-align: right; }
+.ep-actions { width: 100px; text-align: right; }
+.ep-actions button { background: none; border: none; color: var(--det-text-sec); padding: 6px; cursor: pointer; font-size: 16px; transition: 0.2s; }
+.ep-actions button:hover { color: var(--det-text); transform: scale(1.1); }
+.episode-row:hover .ep-num span { display: none; }
+.episode-row:hover .ep-num::before { content: '\f04b'; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--det-text); font-size: 12px; }
+
+/* ── Creator Profile Card ── */
+.creator-profile-card {
+  background: var(--det-card); border-radius: 12px; padding: 24px;
+  border: 1px solid var(--det-border); text-align: center;
+}
+.creator-profile-card img {
+  width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 3px solid rgba(138, 92, 255, 0.4);
+}
+.creator-profile-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.creator-profile-card p { font-size: 13px; color: var(--det-text-sec); line-height: 1.5; margin-bottom: 20px; }
+.btn-follow { background: transparent; border: 1px solid var(--det-text); color: var(--det-text); padding: 8px 24px; border-radius: 30px; font-weight: 600; font-size: 13px; cursor: pointer; transition: 0.2s; }
+.btn-follow:hover { background: var(--det-text); color: var(--det-bg); }
+
+/* ── Sliding Episode Right Panel ── */
+body.panel-open { overflow: hidden; }
+
+.side-panel {
+  position: fixed; right: 0; top: 0; height: 100vh; width: 380px;
+  background: var(--det-card); border-left: 1px solid var(--det-border);
+  z-index: 1050; padding: 24px 24px 110px; overflow-y: auto; overflow-x: hidden;
+  transform: translateX(100%); transition: transform 0.3s ease;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+}
+.side-panel.active { transform: translateX(0); }
+
+.side-panel::-webkit-scrollbar { width: 6px; }
+.side-panel::-webkit-scrollbar-thumb { background: #8a5cff; border-radius: 4px; }
+.ep-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--det-border); }
+.ep-panel-header h3 { font-size: 16px; font-weight: 700; }
+.btn-close-panel { background: none; border: none; color: var(--det-text-sec); font-size: 20px; cursor: pointer; transition: 0.2s; }
+.btn-close-panel:hover { color: var(--det-text); }
+.ep-panel-hero { text-align: center; margin-bottom: 24px; }
+.ep-panel-cover { width: 180px; height: 180px; border-radius: 12px; object-fit: cover; margin-bottom: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+.ep-panel-title { font-size: 20px; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
+.ep-panel-creator { font-size: 14px; color: var(--det-accent); font-weight: 500; margin-bottom: 16px; }
+.ep-panel-actions { display: flex; justify-content: center; gap: 12px; margin-bottom: 30px; }
+.ep-panel-actions .btn-icon-outline { width: 40px; height: 40px; font-size: 14px; }
+.ep-panel-section { margin-bottom: 24px; }
+.ep-panel-section h4 { font-size: 14px; font-weight: 600; color: var(--det-text); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.ep-panel-desc { font-size: 13px; color: var(--det-text-sec); line-height: 1.6; }
+
+/* Side Panel Progress Bar */
+.ep-progress-container { margin-top: 8px; }
+.ep-progress-time { display: flex; justify-content: space-between; font-size: 12px; color: var(--det-text-sec); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+.ep-progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; cursor: pointer; }
+.ep-progress-fill { height: 100%; background: var(--det-accent); border-radius: 4px; transition: width 0.1s linear; }
+
+/* Side Panel Next in Queue */
+.ep-queue-card { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; border: 1px solid var(--det-border); transition: 0.2s; }
+.ep-queue-card:hover { background: rgba(255,255,255,0.08); }
+.ep-queue-img { width: 48px; height: 48px; border-radius: 6px; object-fit: cover; }
+.ep-queue-info { flex: 1; min-width: 0; }
+.ep-queue-title { font-size: 14px; font-weight: 600; color: var(--det-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px; }
+.ep-queue-creator { font-size: 12px; color: var(--det-text-sec); }
+.btn-play-small { background: var(--det-text); color: var(--det-bg); border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
+.btn-play-small:hover { transform: scale(1.1); background: var(--det-accent); color: white; }
+
+.ep-credits { display: flex; flex-direction: column; gap: 8px; }
+.ep-credit-row { display: flex; justify-content: space-between; font-size: 13px; }
+.ep-credit-role { color: var(--det-text-sec); }
+.ep-credit-name { color: var(--det-text); font-weight: 500; }
+
+/* Panel Overlay */
+.sidepanel-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35); z-index: 998;
+  opacity: 0; visibility: hidden; transition: 0.3s;
+}
+.sidepanel-overlay.active { opacity: 1; visibility: visible; }

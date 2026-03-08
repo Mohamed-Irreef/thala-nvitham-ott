@@ -1,0 +1,299 @@
+/* --- Base Styles & Variables --- */
+:root {
+    --bg-main: #020617;
+    --bg-card: #0f172a;
+    --bg-hover: rgba(255, 255, 255, 0.03);
+    --accent: #8b5cf6;
+    --accent-glow: rgba(139, 92, 246, 0.2);
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #1e293b;
+    --check-color: #10b981; /* Green */
+    --cross-color: #475569; /* Muted Grey */
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+.plans-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--nav-height, 90px) + 40px) 20px 40px;
+}
+
+/* --- Section 1: Header --- */
+.plans-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.plans-header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.plans-header p {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+/* --- Section 2: Comparison Table --- */
+.table-section {
+    margin-bottom: 40px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-card);
+    padding: 24px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color);
+    z-index: 10;
+}
+
+.comparison-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.comparison-table tr:hover td {
+    background-color: var(--bg-hover);
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Column Alignments */
+.col-feature {
+    width: 40%;
+    font-weight: 500;
+}
+
+.col-plan {
+    width: 20%;
+    text-align: center;
+}
+
+/* Highlight Premium Column */
+.highlight-col {
+    background-color: rgba(139, 92, 246, 0.05);
+}
+.comparison-table th.highlight-col {
+    color: #a78bfa;
+}
+.comparison-table tr:hover td.highlight-col {
+    background-color: rgba(139, 92, 246, 0.08);
+}
+
+/* Icons */
+.check {
+    color: var(--check-color);
+    font-size: 18px;
+}
+
+.cross {
+    color: var(--cross-color);
+    font-size: 16px;
+}
+
+/* --- Section 3: Selection Cards --- */
+.plan-cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.plan-card {
+    position: relative;
+    flex: 1;
+    max-width: 320px;
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-4px);
+    border-color: #475569;
+}
+
+/* Active/Selected State */
+.plan-card.selected {
+    border-color: var(--accent);
+    background-color: rgba(139, 92, 246, 0.05);
+    box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-gradient);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.plan-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+
+.plan-card.selected h3 {
+    color: var(--text-primary);
+}
+
+.plan-card .price {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.plan-card .price span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* --- Section 4: Primary CTA --- */
+.cta-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cta-btn {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border: none;
+    padding: 18px 60px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 400px;
+}
+
+.cta-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px var(--accent-glow);
+}
+
+.cta-subtext {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* --- Section 5: Footer --- */
+.simple-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.footer-logo span {
+    color: var(--text-primary);
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--text-primary);
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #475569;
+}
+
+/* --- Responsive Behavior --- */
+@media (max-width: 900px) {
+    .plan-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .plans-header h1 {
+        font-size: 28px;
+    }
+    .comparison-table th, .comparison-table td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    .cta-btn {
+        width: 100%;
+    }
+}

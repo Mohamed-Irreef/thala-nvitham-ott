@@ -1,0 +1,139 @@
+﻿<!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║         THALA NIVITHAM — HERO BANNER COMPONENT          ║
+  ║                 Canonical Reference Template             ║
+  ╚══════════════════════════════════════════════════════════╝
+
+  This file is the single source of truth for the hero banner
+  layout used on every page of the platform.
+
+  RULES:
+  ─────────────────────────────────────────────────────────
+  ✅ ALLOWED to change per page:
+     - background-image URL           (.hero-background style)
+     - hero-badge text & color        (span.hero-badge)
+     - hero-title                     (h1.hero-title)
+     - hero-meta items                (div.hero-meta spans)
+     - hero-description text          (p.hero-description)
+     - button labels & data-* attrs   (.hero-play, .hero-icon)
+
+  ❌ NOT allowed to change:
+     - Banner height     → always 520px   (.hero-banner)
+     - Layout / flexbox  → defined in CSS
+     - Gradient overlay  → defined in CSS (.hero-background::before)
+     - Bottom fade       → defined in CSS (.hero-background::after)
+     - Text alignment    → always left
+     - Max-width         → 500px on .hero-text, 1400px container
+     - Padding           → 60px left (var(--nav-height) top)
+
+  DEPENDENCIES:
+  ─────────────────────────────────────────────────────────
+  - css/style.css  (provides .hero-banner, .hero-background,
+                    .hero-content, .hero-text, .hero-badge,
+                    .hero-title, .hero-meta, .hero-description,
+                    .hero-actions, .hero-play, .hero-icon)
+-->
+
+<!-- ══════════════════════════════════════════════════════
+     HERO BANNER  — copy this block into each page
+     Replace: background-image, badge, title, meta, desc, btns
+     ═══════════════════════════════════════════════════════ -->
+<section class="hero-banner">
+
+  <!-- Background image layer (fills banner, aligned right) -->
+  <div class="hero-background"
+       style="background-image: url('assets/REPLACE-WITH-PAGE-IMAGE.jpg')">
+  </div>
+
+  <!-- Text content — left side -->
+  <div class="hero-content">
+    <div class="hero-text">
+
+      <!-- Optional category/status badge -->
+      <span class="hero-badge">🔥 BADGE TEXT</span>
+
+      <!-- Main title -->
+      <h1 class="hero-title">Page Title Here</h1>
+
+      <!-- Meta info row (duration, genre, year, etc.) -->
+      <div class="hero-meta">
+        <span>Meta 1</span> • <span>Meta 2</span> • <span>Meta 3</span>
+      </div>
+
+      <!-- Short description -->
+      <p class="hero-description">
+        Short description of the featured content on this page.
+        Keep it to 1–2 sentences for the best visual balance.
+      </p>
+
+      <!-- Action buttons -->
+      <div class="hero-actions">
+        <!-- Primary CTA -->
+        <button class="hero-play">▶ Primary Action</button>
+        <!-- Secondary icon buttons -->
+        <button class="hero-icon" title="Save">+</button>
+        <button class="hero-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<!-- ══════════════════════════════════════════════════════ -->
+
+
+<!-- ──────────────────────────────────────────────────────
+     PAGE-SPECIFIC EXAMPLES
+     ────────────────────────────────────────────────────── -->
+
+<!--
+  INDEX (Home):
+  ─────────────
+  background-image: url('assets/home-banner1.png')
+  badge:  🔥 FEATURED PODCAST OF THE WEEK
+  title:  Tech Nexus Tamil Season 3
+  meta:   Tamil  •  48 Episodes  •  Avg 45 Min
+  desc:   Deep dive into AI, startups, and the future of
+          technology — in Tamil.
+  btn:    ▶ Subscribe Now
+
+  PODCAST:
+  ─────────
+  background-image: url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?...')
+  badge:  🔥 FEATURED SHOW
+  title:  Tech Nexus Tamil Season 3
+  meta:   Tamil  •  24 Episodes  •  Avg 45 Min
+  btn:    ▶ Play Latest Episode
+
+  MUSICS:
+  ───────
+  background-image: url('https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?...')
+  badge:  🎵 PLATFORM ORIGINAL
+  title:  Neon Nights Vol. 1
+  meta:   Arjun Beats  •  Rap / Tamil  •  2026
+  btn:    ▶ Play Now
+
+  CREATORS:
+  ─────────
+  background-image: url('https://images.unsplash.com/photo-1520423465871-0866049020b7?...')
+  badge:  ⭐ TOP CREATOR
+  title:  Kavi Rajan
+  meta:   Independent Music Producer  •  Tamil Rap
+  btn:    ▶ View Profile
+
+  LIBRARY:
+  ────────
+  background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?...')
+  badge:  📚 YOUR COLLECTION
+  title:  Your Library
+  meta:   Playlists  •  Liked Songs  •  Downloads
+  btn:    ▶ Browse All
+
+  PRODUCTION:
+  ───────────
+  background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?...')
+  badge:  🎙 ORIGINALS
+  title:  Production Hub
+  meta:   Create  •  Fund  •  Produce
+  btn:    ▶ Start a Project
+-->

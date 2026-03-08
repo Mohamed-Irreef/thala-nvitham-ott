@@ -1,0 +1,137 @@
+<!-- ══════════════════════════════════════════════════
+     Thala Nivitham — Shared Navbar Component
+     Loaded by js/navbar.js on every page.
+     Active state is set dynamically by navbar.js.
+     ══════════════════════════════════════════════════ -->
+<nav class="navbar" id="main-navbar">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+  </a>
+
+  <ul class="nav-links">
+    <!-- Home -->
+    <li class="nav-item">
+      <a class="nav-link" href="index.html" data-navpage="index">Home</a>
+    </li>
+
+    <!-- Podcasts (Mega Menu) -->
+    <li class="nav-item">
+      <a class="nav-link" href="podcast.html" data-navpage="podcast">Podcasts</a>
+      <div class="mega-menu">
+        <div class="mega-menu-content">
+          <div class="mega-column">
+            <h4>Genres</h4>
+            <a href="#">Technology</a>
+            <a href="#">Entrepreneurship</a>
+            <a href="#">Health Care</a>
+            <a href="#">Arts &amp; Science</a>
+            <a href="#">Education</a>
+            <a href="#">Sports</a>
+            <a href="#">Current Affairs</a>
+          </div>
+          <div class="mega-column">
+            <h4>Discover</h4>
+            <a href="#">Trending Podcasts</a>
+            <a href="#">Latest Episodes</a>
+            <a href="#">Top Shows</a>
+            <a href="#">Featured Podcasts</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- Music (Mega Menu) -->
+    <li class="nav-item">
+      <a class="nav-link" href="musics.html" data-navpage="musics">Music</a>
+      <div class="mega-menu">
+        <div class="mega-menu-content">
+          <div class="mega-column">
+            <h4>Categories</h4>
+            <a href="#">Songs</a>
+            <a href="#">Albums</a>
+            <a href="#">Rap</a>
+            <a href="#">BGM</a>
+            <a href="#">Instrumental</a>
+            <a href="#">Storytelling Audio</a>
+          </div>
+          <div class="mega-column">
+            <h4>Discover</h4>
+            <a href="#">Trending Songs</a>
+            <a href="#">New Releases</a>
+            <a href="#">Top Artists</a>
+            <a href="#">Featured Albums</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- Creators -->
+    <li class="nav-item">
+      <a class="nav-link" href="creators.html" data-navpage="creators">Creators</a>
+    </li>
+
+    <!-- Production -->
+    <li class="nav-item">
+      <a class="nav-link" href="index.html#investor">Production</a>
+    </li>
+
+    <!-- Library -->
+    <li class="nav-item">
+      <a class="nav-link" href="library.html" data-navpage="library">Library</a>
+    </li>
+  </ul>
+
+  <div class="nav-right">
+    <!-- Search -->
+    <div class="search-wrapper">
+      <span class="search-icon">🔍</span>
+      <input id="searchInput" class="search-input" type="text" placeholder="Search podcasts, music, creators…"/>
+      <div id="searchDropdown" class="search-dropdown">
+        <div class="search-section-title">Recent Searches</div>
+        <div class="search-suggestion"><div class="sug-icon">&#x2197;</div>Tech Talk Tamil</div>
+        <div class="search-suggestion"><div class="sug-icon">&#x2197;</div>Rooftop Sessions</div>
+        <div class="search-section-title" style="margin-top:8px">Suggestions</div>
+        <div class="search-suggestion"><div class="sug-icon">&#x2197;</div>Search Podcasts</div>
+        <div class="search-suggestion"><div class="sug-icon">&#x2197;</div>Search Music</div>
+        <div class="search-suggestion"><div class="sug-icon">&#x2197;</div>Search Creators</div>
+        <div class="search-suggestion"><div class="sug-icon">&#x2197;</div>Search Albums</div>
+      </div>
+    </div>
+
+    <button class="btn btn-outline">Get App</button>
+    <a href="subscription.html" class="btn btn-primary">⚡ Subscribe</a>
+
+    <!-- Language Selector -->
+    <div class="lang-btn-wrapper">
+      <button class="icon-btn" title="Language">🌐</button>
+      <div class="language-dropdown">
+        <div class="lang-option active" data-lang="en"><span class="lang-check">✓</span>English</div>
+        <div class="lang-option" data-lang="hi"><span class="lang-check"></span>हिंदी (Hindi)</div>
+        <div class="lang-option" data-lang="mr"><span class="lang-check"></span>मराठी (Marathi)</div>
+        <div class="lang-option" data-lang="te"><span class="lang-check"></span>తెలుగు (Telugu)</div>
+        <div class="lang-option" data-lang="ta"><span class="lang-check"></span>தமிழ் (Tamil)</div>
+      </div>
+    </div>
+
+    <!-- Profile / Avatar -->
+    <div class="avatar-wrapper">
+      <div class="avatar">TN</div>
+      <div class="profile-dropdown">
+        <div class="profile-header">
+          <div class="profile-avatar-large">TN</div>
+          <div class="profile-greeting">
+            <span class="profile-hello">Hello, Guest</span>
+          </div>
+        </div>
+        <p class="profile-prompt">Choose a login method</p>
+        <div class="login-methods">
+          <a href="signup.html" class="login-btn"><span class="login-icon">G</span>Google</a>
+          <a href="signup.html" class="login-btn"><span class="login-icon">f</span>Facebook</a>
+          <a href="signup.html" class="login-btn"><span class="login-icon">✉</span>Email</a>
+          <a href="signup.html" class="login-btn"><span class="login-icon"></span>Apple</a>
+        </div>
+        <a href="signup.html" class="login-mobile-btn">Login with Mobile Number</a>
+      </div>
+    </div>
+  </div>
+</nav>

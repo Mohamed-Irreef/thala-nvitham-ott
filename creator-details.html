@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala Nivitham - Creator Details</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/creator-details.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <div id="navbar-placeholder"></div>
+    <script src="js/navbar.js"></script>
+
+    <main class="creator-details-main">
+        
+        <section class="creator-banner" id="creator-banner">
+            <img src="" alt="Banner Background" class="banner-bg" id="banner-img">
+            <div class="banner-overlay"></div>
+        </section>
+
+        <section class="creator-profile-block">
+            <div class="profile-image-container">
+                <img src="" alt="Creator Profile" class="profile-img" id="profile-img">
+            </div>
+            <div class="profile-info">
+                <h1 class="creator-name" id="creator-name">Creator Name</h1>
+                <h2 class="creator-category" id="creator-category">Category</h2>
+                <div class="profile-actions">
+                    <span class="follower-count" id="creator-followers">0 Followers</span>
+                    <button class="btn-follow" id="follow-btn" onclick="toggleFollow()">
+                        <i class="fa-solid fa-user-plus"></i> Follow
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="creator-stats-section">
+            <div class="stat-item">
+                <span class="stat-value" id="stat-songs">0</span>
+                <span class="stat-label">Songs</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="stat-albums">0</span>
+                <span class="stat-label">Albums</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="stat-podcasts">0</span>
+                <span class="stat-label">Podcasts</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="stat-followers-large">0</span>
+                <span class="stat-label">Followers</span>
+            </div>
+        </section>
+
+        <section class="creator-description-section">
+            <p id="creator-bio">Loading creator biography...</p>
+        </section>
+
+        <section class="creator-content-section">
+            <div class="tabs-container" id="main-tabs">
+                <button class="tab-btn active" data-tab="Songs">Songs</button>
+                <button class="tab-btn" data-tab="Albums">Albums</button>
+                <button class="tab-btn" data-tab="Rap Content">Rap Content</button>
+                <button class="tab-btn" data-tab="BGM">BGM</button>
+                <button class="tab-btn" data-tab="Instrumental">Instrumental</button>
+                <button class="tab-btn" data-tab="Podcasts">Podcasts</button>
+            </div>
+
+            <div class="tab-content-area" id="tab-content-area">
+                </div>
+        </section>
+
+    </main>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom:14px">
+            <img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+          </div>
+          <p class="footer-desc">India's premier digital audio streaming platform for podcasts, music, rap, and storytelling. Stream in 6 languages.</p>
+          <div class="social-links">
+            <a class="social-link" href="#">𝕏</a>
+            <a class="social-link" href="#">in</a>
+            <a class="social-link" href="#">▶</a>
+            <a class="social-link" href="#">📷</a>
+            <a class="social-link" href="#">💬</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Platform</div>
+          <a class="footer-link" href="#">Home</a>
+          <a class="footer-link" href="#">Podcasts</a>
+          <a class="footer-link" href="#">Music</a>
+          <a class="footer-link" href="#">Creators</a>
+          <a class="footer-link" href="#">Production</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <a class="footer-link" href="#">About Us</a>
+          <a class="footer-link" href="#">Careers</a>
+          <a class="footer-link" href="#">Press</a>
+          <a class="footer-link" href="#">Blog</a>
+          <a class="footer-link" href="#">Contact Us</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Support</div>
+          <a class="footer-link" href="#">Help Center</a>
+          <a class="footer-link" href="#">Privacy Policy</a>
+          <a class="footer-link" href="#">Terms & Conditions</a>
+          <a class="footer-link" href="#">Cookie Policy</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Creators</div>
+          <a class="footer-link" href="#">Become a Creator</a>
+          <a class="footer-link" href="#">Podcast Studio</a>
+          <a class="footer-link" href="#">Upload Music</a>
+          <a class="footer-link" href="#">Investor Portal</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Thala Nivitham. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a class="footer-link" style="margin:0" href="#">Privacy</a>
+          <a class="footer-link" style="margin:0" href="#">Terms</a>
+          <a class="footer-link" style="margin:0" href="#">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/cards.js"></script>
+    <script src="js/creator-details.js"></script>
+</body>
+</html>

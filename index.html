@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/png" href="assets/logo-icon.png"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Thala Nivitham — Stream. Listen. Discover.</title>
+<meta name="description" content="Thala Nivitham is your premium digital audio streaming platform for podcasts, music, rap, and storytelling."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css?v=2"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+<script>
+tailwind.config={theme:{extend:{colors:{accent:'#7c3aed','accent-light':'#a855f7',gold:'#f59e0b',bg:'#0a0a0f','bg-card':'#16161e'}}}}
+</script>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<div id="navbar-placeholder"></div>
+<script src="js/navbar.js"></script>
+
+<!-- ══════════ HERO BANNER ══════════ -->
+<section class="hero-banner">
+
+  <!-- ── Slide 1 ── -->
+  <div class="hero-slide active">
+    <div class="hero-background" style="background-image:url('assets/home-banner1.png')"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">🔥 FEATURED PODCAST OF THE WEEK</span>
+        <h1 class="hero-title">Tech Nexus Tamil Season 3</h1>
+        <div class="hero-meta">
+          <span>Tamil</span> • <span>48 Episodes</span> • <span>Avg 45 Min</span>
+        </div>
+        <p class="hero-description">Deep dive into AI, startups, and the future of technology — in Tamil. Hosted by leading industry experts every Thursday.</p>
+        <div class="hero-actions">
+          <button class="hero-play">▶ Subscribe Now</button>
+          <button class="hero-icon" title="Add to Playlist">+</button>
+          <button class="hero-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+        </div>
+        <div class="hero-subtext">
+          <i class="fa-solid fa-bag-shopping icon-prime"></i> Watch with a Prime membership
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Slide 2 ── -->
+  <div class="hero-slide">
+    <div class="hero-background" style="background-image:url('assets/home-banner2.png')"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">🎵 MUSIC SPOTLIGHT</span>
+        <h1 class="hero-title">Ilayaraja Classics Collection</h1>
+        <div class="hero-meta">
+          <span>Tamil</span> • <span>120 Songs</span> • <span>All Time Hits</span>
+        </div>
+        <p class="hero-description">A curated collection of timeless compositions by the legendary Maestro Ilayaraja. Relive the golden era of Tamil cinema music.</p>
+        <div class="hero-actions">
+          <button class="hero-play">▶ Play Now</button>
+          <button class="hero-icon" title="Add to Library">+</button>
+          <button class="hero-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+        </div>
+        <div class="hero-subtext">
+          <i class="fa-solid fa-bag-shopping icon-prime"></i> Watch with a Prime membership
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Dots ── -->
+  <div class="hero-dots">
+    <button class="hero-dot active"></button>
+    <button class="hero-dot"></button>
+  </div>
+
+</section>
+
+<!-- ══════════ MAIN CONTENT ══════════ -->
+<main class="main-content">
+
+<!-- ── CONTINUE LISTENING ── -->
+<section class="section" id="continue">
+  <div class="section-header">
+    <div><div class="section-title">▶ &nbsp; Continue Listening</div><div class="section-subtitle">Pick up where you left off</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row">
+      <!-- Continue cards -->
+      <div class="continue-card">
+        <svg class="continue-thumb" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#1e1040"/><text x="50%" y="58%" font-size="28" text-anchor="middle">🎙</text></svg>
+        <div class="continue-body">
+          <div class="continue-title">Tech Nexus Tamil — Ep.47</div>
+          <div class="continue-sub">Technology · 45 min</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:68%"></div></div>
+          <div class="continue-time">30 min remaining</div>
+        </div>
+      </div>
+      <div class="continue-card">
+        <svg class="continue-thumb" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#1a1000"/><text x="50%" y="58%" font-size="28" text-anchor="middle">🎵</text></svg>
+        <div class="continue-body">
+          <div class="continue-title">Vandi Vandi Album</div>
+          <div class="continue-sub">Rap · 52 min</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:35%"></div></div>
+          <div class="continue-time">34 min remaining</div>
+        </div>
+      </div>
+      <div class="continue-card">
+        <svg class="continue-thumb" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#0a1a10"/><text x="50%" y="58%" font-size="28" text-anchor="middle">📖</text></svg>
+        <div class="continue-body">
+          <div class="continue-title">Kadhal Kathaigal — Ep.8</div>
+          <div class="continue-sub">Storytelling · 22 min</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:82%"></div></div>
+          <div class="continue-time">4 min remaining</div>
+        </div>
+      </div>
+      <div class="continue-card">
+        <svg class="continue-thumb" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#1a0520"/><text x="50%" y="58%" font-size="28" text-anchor="middle">🎼</text></svg>
+        <div class="continue-body">
+          <div class="continue-title">Mazhaikalam BGM</div>
+          <div class="continue-sub">Instrumental · 38 min</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:50%"></div></div>
+          <div class="continue-time">19 min remaining</div>
+        </div>
+      </div>
+    </div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── TRENDING NOW ── -->
+<section class="section" id="trending">
+  <div class="section-header">
+    <div><div class="section-title"> Trending Now</div><div class="section-subtitle">Most listened this week</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row" id="trendingRow">
+      <!-- Cards generated by JS -->
+    </div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── NEW RELEASES ── -->
+<section class="section" id="new-releases">
+  <div class="section-header">
+    <div><div class="section-title"> New Releases</div><div class="section-subtitle">Fresh content just for you</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="subsection-tabs">
+    <button class="tab-btn active">All</button>
+    <button class="tab-btn">Podcasts</button>
+    <button class="tab-btn">Music Albums</button>
+    <button class="tab-btn">Rap Songs</button>
+    <button class="tab-btn">Storytelling</button>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row" id="newReleasesRow"></div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── PODCASTS BY CATEGORY ── -->
+<section class="section" id="categories">
+  <div class="section-header">
+    <div><div class="section-title"> Podcasts by Category</div><div class="section-subtitle">Find your favourite genre</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row">
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=entertainment'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#1a0a30"/><text x="50%" y="45%" font-size="40" text-anchor="middle">🎭</text></svg><div class="cat-overlay"><span class="cat-name">Entertainment</span></div></div>
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=technology'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#0a1a30"/><text x="50%" y="45%" font-size="40" text-anchor="middle">💻</text></svg><div class="cat-overlay"><span class="cat-name">Technology</span></div></div>
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=cooking'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#1a1000"/><text x="50%" y="45%" font-size="40" text-anchor="middle">🍳</text></svg><div class="cat-overlay"><span class="cat-name">Cooking</span></div></div>
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=entrepreneurship'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#001a10"/><text x="50%" y="45%" font-size="40" text-anchor="middle">💼</text></svg><div class="cat-overlay"><span class="cat-name">Entrepreneurship</span></div></div>
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=health-care'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#1a0010"/><text x="50%" y="45%" font-size="40" text-anchor="middle">🏥</text></svg><div class="cat-overlay"><span class="cat-name">Health Care</span></div></div>
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=arts-and-science'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#100a1a"/><text x="50%" y="45%" font-size="40" text-anchor="middle">🎨</text></svg><div class="cat-overlay"><span class="cat-name">Arts & Science</span></div></div>
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=education'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#0a1010"/><text x="50%" y="45%" font-size="40" text-anchor="middle">📚</text></svg><div class="cat-overlay"><span class="cat-name">Education</span></div></div>
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=sports'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#101a00"/><text x="50%" y="45%" font-size="40" text-anchor="middle">⚽</text></svg><div class="cat-overlay"><span class="cat-name">Sports</span></div></div>
+      <div class="cat-card" onclick="window.location.href='podcast-search-result.html?category=current-affairs'" style="cursor:pointer"><svg class="cat-bg" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#1a0a00"/><text x="50%" y="45%" font-size="40" text-anchor="middle">📰</text></svg><div class="cat-overlay"><span class="cat-name">Current Affairs</span></div></div>
+    </div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── POPULAR MUSIC ── -->
+<section class="section" id="popular-music">
+  <div class="section-header">
+    <div><div class="section-title"> Popular Music</div><div class="section-subtitle">Top tracks everyone's listening to</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="subsection-tabs">
+    <button class="tab-btn active">Popular Songs</button>
+    <button class="tab-btn">Albums</button>
+    <button class="tab-btn">Rap Tracks</button>
+    <button class="tab-btn">Trending Music</button>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row" id="musicRow"></div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── FEATURED CREATORS ── -->
+<section class="section" id="creators">
+  <div class="section-header">
+    <div><div class="section-title"> Featured Creators</div><div class="section-subtitle">Follow your favourite voices</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="subsection-tabs">
+    <button class="tab-btn active">All</button>
+    <button class="tab-btn">Podcast Hosts</button>
+    <button class="tab-btn">Music Artists</button>
+    <button class="tab-btn">Rap Artists</button>
+    <button class="tab-btn">Independent</button>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row" id="creatorsRow"></div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── PLATFORM ORIGINALS ── -->
+<section class="section" id="originals">
+  <div class="section-header">
+    <div><div class="section-title"> Platform Originals</div><div class="section-subtitle">Exclusive content made by Thala Nivitham</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row" id="originalsRow"></div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── INVESTOR-FUNDED PRODUCTIONS ── -->
+<section class="section" id="investor">
+  <div class="section-header">
+    <div><div class="section-title">💰 Investor-Funded Productions</div><div class="section-subtitle">Premium projects backed by our investors</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row" id="investorRow"></div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── RECOMMENDED FOR YOU ── -->
+<section class="section" id="recommended">
+  <div class="section-header">
+    <div><div class="section-title">💡 Recommended For You</div><div class="section-subtitle">Personalised picks based on your taste</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row" id="recommendedRow"></div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+<!-- ── TOP CHARTS ── -->
+<section class="section" id="charts">
+  <div class="section-header">
+    <div><div class="section-title">🏆 Top Charts</div><div class="section-subtitle">This week's most popular content</div></div>
+  </div>
+  <div class="charts-grid" id="chartsGrid"></div>
+</section>
+
+<!-- ── LANGUAGE-BASED CONTENT ── -->
+<section class="section" id="languages">
+  <div class="section-header">
+    <div><div class="section-title">🌐 Browse by Language</div><div class="section-subtitle">Content in your mother tongue</div></div>
+    <a class="see-all" href="#">See all →</a>
+  </div>
+  <div class="row-wrapper">
+    <button class="row-nav prev">‹</button>
+    <div class="cards-row">
+      <div class="lang-card"><div class="lang-header" style="background:linear-gradient(135deg,#1e0a3c,#2d1b69)">🔤</div><div class="lang-body"><div class="lang-name">Tamil</div><div class="lang-count">2,400+ shows</div></div></div>
+      <div class="lang-card"><div class="lang-header" style="background:linear-gradient(135deg,#0f2027,#203a43)">🔤</div><div class="lang-body"><div class="lang-name">Hindi</div><div class="lang-count">1,800+ shows</div></div></div>
+      <div class="lang-card"><div class="lang-header" style="background:linear-gradient(135deg,#1a1000,#3d2b1f)">🔤</div><div class="lang-body"><div class="lang-name">Telugu</div><div class="lang-count">960+ shows</div></div></div>
+      <div class="lang-card"><div class="lang-header" style="background:linear-gradient(135deg,#001a0f,#0d3b2a)">🔤</div><div class="lang-body"><div class="lang-name">Malayalam</div><div class="lang-count">720+ shows</div></div></div>
+      <div class="lang-card"><div class="lang-header" style="background:linear-gradient(135deg,#1a000f,#3b0d25)">🔤</div><div class="lang-body"><div class="lang-name">Kannada</div><div class="lang-count">540+ shows</div></div></div>
+      <div class="lang-card"><div class="lang-header" style="background:linear-gradient(135deg,#0a0a1a,#1a1a3e)">🔤</div><div class="lang-body"><div class="lang-name">English</div><div class="lang-count">3,100+ shows</div></div></div>
+    </div>
+    <button class="row-nav next">›</button>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:14px">
+        <img src="assets/logo.png" alt="Thala Nivitham" class="logo-img"/>
+      </div>
+      <p class="footer-desc">India's premier digital audio streaming platform for podcasts, music, rap, and storytelling. Stream in 6 languages.</p>
+      <div class="social-links">
+        <a class="social-link" href="#">𝕏</a>
+        <a class="social-link" href="#">in</a>
+        <a class="social-link" href="#">▶</a>
+        <a class="social-link" href="#">📷</a>
+        <a class="social-link" href="#">💬</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <a class="footer-link" href="#">Home</a>
+      <a class="footer-link" href="#">Podcasts</a>
+      <a class="footer-link" href="#">Music</a>
+      <a class="footer-link" href="#">Creators</a>
+      <a class="footer-link" href="#">Production</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <a class="footer-link" href="#">About Us</a>
+      <a class="footer-link" href="#">Careers</a>
+      <a class="footer-link" href="#">Press</a>
+      <a class="footer-link" href="#">Blog</a>
+      <a class="footer-link" href="#">Contact Us</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <a class="footer-link" href="#">Help Center</a>
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Terms & Conditions</a>
+      <a class="footer-link" href="#">Cookie Policy</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Creators</div>
+      <a class="footer-link" href="#">Become a Creator</a>
+      <a class="footer-link" href="#">Podcast Studio</a>
+      <a class="footer-link" href="#">Upload Music</a>
+      <a class="footer-link" href="#">Investor Portal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Thala Nivitham. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a class="footer-link" style="margin:0" href="#">Privacy</a>
+      <a class="footer-link" style="margin:0" href="#">Terms</a>
+      <a class="footer-link" style="margin:0" href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cards.js"></script>
+
+<script src="js/script.js"></script>
+
+<!-- Add Global Bottom Player Container -->
+<!-- <div id="global-player-root"></div> -->
+
+<!-- Inject Modular Audio Simulation Player Logic -->
+<script src="player/playerState.js"></script>
+<script src="player/queueManager.js"></script>
+<script src="player/audioPlayer.js"></script>
+<script src="components/bottomPlayer.js"></script>
+<script src="components/sidePanel.js"></script>
+<script src="components/queueView.js"></script>
+<script src="components/timeline.js"></script>
+<script src="player/playerUI.js"></script>
+
+<script>
+  // Spin up global UX player layer
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof initializePlayer === 'function') {
+      initializePlayer();
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* --- Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* --- Layout --- */
+.subscription-container {
+    display: flex;
+    min-height: calc(100vh - var(--nav-height, 70px));
+    margin-top: var(--nav-height, 70px);
+    width: 100vw;
+    background-image: url('../assets/subscription.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* --- Left Section (40%) --- */
+.sub-left {
+    flex: 0 0 40%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 80px;
+    z-index: 2; /* Ensures it sits cleanly above the right side gradient */
+    position: relative;
+}
+
+.sub-content {
+    max-width: 540px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sub-title {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.sub-desc {
+    font-size: 18px;
+    font-weight: 500;
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 48px;
+}
+
+/* --- Subscription Buttons --- */
+.sub-plans {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.plan-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.plan-btn, .compare-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #00A8E1, #146EB4);
+    color: #ffffff;
+    border: none;
+    padding: 18px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plan-btn:hover, .compare-btn:hover {
+    background: linear-gradient(135deg, #0BB3F0, #1C7ED6);
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 168, 225, 0.3);
+}
+
+.plan-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #a0a0a0;
+    text-align: center;
+}
+
+.compare-wrapper {
+    margin-top: 16px;
+}
+
+/* --- Right Section (60%) --- */
+.sub-right {
+    flex: 0 0 60%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Cinematic Gradient Overlay */
+.sub-overlay {
+    position: absolute;
+    inset: 0;
+    /* Spans the full background to ensure text remains readable on left */
+    background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.1) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    /* Tablet layout: 50% / 50% */
+    .sub-left {
+        flex: 0 0 50%;
+        padding: 40px 50px;
+    }
+    .sub-right {
+        flex: 0 0 50%;
+    }
+    .sub-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile layout: Stack vertically */
+    .subscription-container {
+        flex-direction: column;
+    }
+    .sub-left {
+        flex: 1 0 auto;
+        padding: 50px 24px;
+        text-align: center;
+    }
+    .sub-title {
+        font-size: 34px;
+        white-space: normal;
+    }
+    .sub-desc {
+        font-size: 16px;
+    }
+    .sub-right {
+        /* Allows the image section to appear below the plans */
+        flex: 1 0 400px; 
+        width: 100%;
+    }
+    .sub-overlay {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.2) 100%);
+    }
+}

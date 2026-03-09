@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Dynamic Banner Data Structure (Exactly 4 Sliding Banners) ---
+    // --- Dynamic Banner Data Structure (Exactly 2 Sliding Banners) ---
     const creatorBannerData = [
         {
             id: "cr_kavi",
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Kavi Rajan",
             role: "Independent Music Producer",
             desc: "Creating Tamil rap and experimental fusion music with deep cultural roots.",
-            image: "https://images.unsplash.com/photo-1520423465871-0866049020b7?q=80&w=1200&auto=format&fit=crop"
+            image: "assets/creator-banner1.png"
         },
         {
             id: "cr_arun",
@@ -16,23 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Arun Kumar",
             role: "Technology Podcast Host",
             desc: "Deep dive into AI, startups, and the future of technology in India.",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
-        },
-        {
-            id: "cr_meera",
-            label: "TRENDING CREATOR",
-            name: "Meera S",
-            role: "Motivational Speaker",
-            desc: "Inspiring millions with daily stories of resilience and personal growth.",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
-        },
-        {
-            id: "cr_stan",
-            label: "CREATOR OF THE WEEK",
-            name: "MC Stan",
-            role: "Rap Artist",
-            desc: "Breaking records with the hardest hitting verses from the streets.",
-            image: "https://images.unsplash.com/photo-1520342868574-5fa3804e551c?q=80&w=1200&auto=format&fit=crop"
+            image: "assets/creator-banner2.png"
         }
     ];
 
